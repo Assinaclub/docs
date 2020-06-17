@@ -1,0 +1,82 @@
+.verb
+{
+    color: white;  
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    font-size: 8px; 
+    margin-right: 10px; 
+    border-radius: 3px;
+    text-decoration: none !important;
+}
+
+.verb:hover
+{
+    text-decoration: none !important;
+}
+
+.httpGET
+{
+    background-color: #6bbd5b;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.httpPOST
+{
+    background-color: #248fb2;
+    padding-left: 12px; 
+    padding-right: 12px;
+}
+
+.httpPUT
+{
+    background-color: #9b708b;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.httpDELETE
+{
+    background-color: #e27a7a;
+    padding-left: 8px; 
+    padding-right: 8px;
+}
+
+.httpHOOK {
+    background-color: #fe940d;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.sidebar ul li a {
+    display: inline;
+}
+
+.sidebar-nav .active{
+    border-right: 3px solid !important;
+    color: var(--theme-color,#42b983);
+}
+
+.sidebar ul li.active>a
+{
+    border-width: 0px;
+}
+
+.sidebar-nav ul {
+    margin: -10px 0 0 15px;
+}
+.body.sticky .sidebar, body.sticky .sidebar-toggle {
+    position: unset;
+}
+
+body .docsify-pagination-container {
+    border-width: 5px;
+    border-color: #00304d;
+}
+
+:root {
+    --docsifytabs-border-color: rgb(241, 241, 241);
+    --docsifytabs-tab-highlight-color: #00304d;
+    --docsifytabs-tab-highlight-px: 3px;
+    --docsifytabs-border-radius-px: 3px;
+}
