@@ -1,0 +1,1 @@
+## <span class="verb httpPOST">POST</span> Registrar Novo Vendedor
