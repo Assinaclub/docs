@@ -25,3 +25,5 @@
     * <span class="verb httpGET">GET</span> [Consultar Transferência](pt-br/transfers?id=consultar-transferência)
     * <span class="verb httpGET">GET</span> [Listar Transferência dos Vendedores](pt-br/transfers?id=listar-transferência-dos-vendedores)
     * <span class="verb httpGET">GET</span> [Consultar Transferência de Vendedor](pt-br/transfers?id=consultar-transferência-de-vendedor)
+    * <span class="verb httpGET">GET</span> [Listar Lançamentos Futuros](pt-br/future_transfers?id=listar-lançamentos-futuros)
+    * <span class="verb httpGET">GET</span> [Listar Lançamentos Futuros de Vendedor](pt-br/future_transfers?id=listar-lançamentos-futuros-de-vendedor)
