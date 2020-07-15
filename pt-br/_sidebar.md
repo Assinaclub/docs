@@ -19,3 +19,9 @@
     * <span class="verb httpPUT">PUT</span> [Alterar Vendedor](pt-br/sellers?id=alterar-vendedor)
     * <span class="verb httpGET">GET</span> [Consultar Vendedor](pt-br/sellers?id=consultar-vendedor)
     * <span class="verb httpGET">GET</span> [Listar Vendedores](pt-br/sellers?id=listar-vendedores)
+* **Transferência**
+    * [Overview](pt-br/transfers?id=overview)
+    * <span class="verb httpGET">GET</span> [Listar Transferências](pt-br/transfers?id=listar-transferências)
+    * <span class="verb httpGET">GET</span> [Consultar Transferência](pt-br/transfers?id=consultar-transferência)
+    * <span class="verb httpGET">GET</span> [Listar Transferência dos Vendedores](pt-br/transfers?id=listar-transferência-dos-vendedores)
+    * <span class="verb httpGET">GET</span> [Consultar Transferência de Vendedor](pt-br/transfers?id=consultar-transferência-de-vendedor)
