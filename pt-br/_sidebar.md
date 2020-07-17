@@ -5,7 +5,7 @@
 * [**Autenticação**](pt-br/auth.md)
 * [**Pagamento**](pt-br/payment.md)
 * **Transação**
-    * [Overview](pt-br/transfers?id=overview)
+    * [Overview](pt-br/transaction?id=overview)
     * <span class="verb httpGET">GET</span> [Listar Transações](pt-br/transaction?id=listar-transações)
     * <span class="verb httpGET">GET</span> [Consultar Transação](pt-br/transaction?id=consultar-transação)
 * **Tokenizar**
