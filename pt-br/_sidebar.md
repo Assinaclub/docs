@@ -31,3 +31,6 @@
     * <span class="verb httpGET">GET</span> [Consultar Transferência de Vendedor](pt-br/transfers?id=consultar-transferência-de-vendedor)
     * <span class="verb httpGET">GET</span> [Listar Lançamentos Futuros](pt-br/future_transfers?id=listar-lançamentos-futuros)
     * <span class="verb httpGET">GET</span> [Listar Lançamentos Futuros de Vendedor](pt-br/future_transfers?id=listar-lançamentos-futuros-de-vendedor)
+* **Voucher**
+    * [Overview](pt-br/voucher?id=overview)
+    * <span class="verb httpPOST">POST</span> [Registrar Voucher](pt-br/voucher?id=registrar-voucher)
