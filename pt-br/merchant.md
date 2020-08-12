@@ -24,21 +24,32 @@ Este serviço realiza o processo de credenciamento de um Estabelecimento Comerci
 ### Parâmetros 
 > Os parâmetros abaixo devem ser enviados em formato JSON
     
-| Atributo     | Tipo   | Descrição | Obrigatório | Tamanho |
-| ------------ | ------ | --------- | ----------- | ------- |
-| name | string | Nome da Empresa ou Pessoa Física | sim | 80 |
-| email |string	| Endereço de e-mail. Será utilizado como login da conta | sim | 50 |
-| password | string	| Senha de acesso que será utilizada no acesso ao Painel | sim |  6-20 |
-| document | string | Número de CPF ou CNPJ	| sim |  - |
-| phone	| string | Número de Telefone ou Celular | sim |  - |
-| [**address**]	| **Object** | Dados do Endereço | sim |  - |
-| street | string | Logradouro (Rua, Av, etc...) | sim |  70 |
-| number |	string | Número do Endereço | sim |  10 |
-| district | string | Nome do Bairro do Endereço | sim |  100 |
-| complement | string | Complemento do Endereço | sim |  100 |
-| city | string | Nome da Cidade | sim |  50 |
-| state | string | Sigla do Estado | sim |  2 |
-| zipcode | string | CEP do Endereço | sim |  8 |
+| Atributo      | Tipo       | Descrição                                                     | Obrigatório | Tamanho                  |
+|---------------|------------|---------------------------------------------------------------|-------------|--------------------------|
+| name          | string     | Nome da Empresa ou Pessoa Física                              | sim         | 80                       |
+| email         | string     | Endereço de e-mail. Será utilizado como login da conta        | sim         | 50                       |
+| password      | string     | Senha de acesso que será utilizada no acesso ao Painel        | sim         | 6-20                     |
+| document      | string     | Número de CPF ou CNPJ                                         | sim         | -                        |
+| phone         | string     | Número de Telefone ou Celular                                 | sim         | -                        |
+| **[address]** | **Object** | Dados do Endereço                                             | sim         | -                        |
+| street        | string     | Logradouro (Rua, Av, etc...)                                  | sim         | 70                       |
+| number        | string     | Número do Endereço                                            | sim         | 10                       |
+| district      | string     | Nome do Bairro do Endereço                                    | sim         | 100                      |
+| complement    | string     | Complemento do Endereço                                       | sim         | 100                      |
+| city          | string     | Nome da Cidade                                                | sim         | 50                       |
+| state         | string     | Sigla do Estado                                               | sim         | 2                        |
+| zipcode       | string     | CEP do Endereço                                               | sim         | 8                        |
+| **[owner]**   | **Object** | **Dados do Responsável/Sócio (Quando Pessoa Jurídica)**       | -           | -                        |
+| name          | string     | Nome do Responsável/Sócio da Empresa                          | não         | 80                       |
+| email         | string     | Endereço de e-mail do Responsável/Sócio da Empresa            | não         | 50                       |
+| cpf           | string     | CPF do Responsável/Sócio da Empresa                           | não         | -                        |
+| phone         | string     | Telefone ou Celular do Responsável/Sócio da Empresa           | não         | -                        |
+| **[bank]**    | **Object** | **Dados Bancários da Empresa**                                | -           | -                        |
+| code          | string     | Código do Banco                                               | não         | 3                        |
+| agency        | string     | Número da Agência                                             | não         | 4                        |
+| account       | string     | Número da Conta Corrente                                      | não         | 10                       |
+| type          | string     | Tipo da Conta                                                 | não         | 'checkings' or 'savings' |
+| external_id   | string     | ID Externo da Conta (Exemplo: E-mail registrado no PagSeguro) | não         | 120                      |
 
 ### Exemplo de Conteúdo a ser Enviado
 Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
@@ -74,30 +85,37 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 ### Estrutura do conteúdo de resposta
 Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 
-| Atributo | Tipo | Descrição |
-| -------| ------ | ------ |
-| id | string |	Identificação do estabelecimento no sistema. |
-| resource | string | Tipo do Recurso |
-| **[attributes]** | **Object** |	**Objeto com os atributos do recurso** |
-| is_active | boolean | Informa se o recurso está ativo ou inativo no sistema. |
-| name | string | Nome da pessoa física ou Nome Fantasia da Empresa |
-| business_name	| string | Nome da Empresa |
-| document | string | CPF ou CNPJ |
-| email | string | Endereço de e-mail |
-| phone | string | Número do telefone ou celular |
-| created_at | date	 | Data em que o recurso foi criado |
-| updated_at | date | Última data que o recurso foi alterado |
-| **[address]** | **Object** | **Objeto com os atributos do endereço.** |
-| street | string | Logradouro (Rua, Av, Etc). |
-| number | string | Número do Endereço |
-| district | string	| Nome do Bairro do Endereço |
-| complement | string | Complemento do Endereço |
-| city | string	| Nome da Cidade |
-| state | string | Sigla do Estado |
-| zipcode | string | CEP do Endereço |
-| **[owner]** | **Objeto** | Objeto com os atributos do sócio responsável em caso de empresa. |
-| name | string | Nome do sócio responsável |
-| cpf | string | CPF |
+| Atributo         | Tipo       | Descrição                                                            |
+|------------------|------------|----------------------------------------------------------------------|
+| id               | string     | Identificação do estabelecimento no sistema.                         |
+| resource         | string     | Tipo do Recurso                                                      |
+| **[attributes]** | **Object** | **Objeto com os atributos do recurso**                               |
+| is_active        | boolean    | Informa se o recurso está ativo ou inativo no sistema.               |
+| name             | string     | Nome da pessoa física ou Nome Fantasia da Empresa                    |
+| business_name    | string     | Nome da Empresa                                                      |
+| document         | string     | CPF ou CNPJ                                                          |
+| email            | string     | Endereço de e-mail                                                   |
+| phone            | string     | Número do telefone ou celular                                        |
+| created_at       | date       | Data em que o recurso foi criado                                     |
+| updated_at       | date       | Última data que o recurso foi alterado                               |
+| **[address]**    | **Object** | **Objeto com os atributos do endereço.**                             |
+| street           | string     | Logradouro (Rua, Av, Etc).                                           |
+| number           | string     | Número do Endereço                                                   |
+| district         | string     | Nome do Bairro do Endereço                                           |
+| complement       | string     | Complemento do Endereço                                              |
+| city             | string     | Nome da Cidade                                                       |
+| state            | string     | Sigla do Estado                                                      |
+| zipcode          | string     | CEP do Endereço                                                      |
+| **[owner]**      | **Object** | **Objeto com os atributos do sócio responsável em caso de empresa.** |
+| name             | string     | Nome do Responsável/Sócio da Empresa                                 |
+| cpf              | string     | CPF do Responsável/Sócio da Empresa                                  |
+| phone            | string     | Número de telefone do Responsável/Sócio da Empresa                   |
+| **[bank]**       | **Object** | **Dados Bancários da Empresa**                                       |
+| code             | string     | Código do Banco                                                      |
+| agency           | string     | Número da Agência                                                    |
+| account          | string     | Número da Conta                                                      |
+| type             | string     | Tipo da Conta                                                        |
+| external_id      | string     | ID Externo da Conta (Exemplo: E-mail registrado no PagSeguro)        |
 
 ### Conteúdo de resposta
 Confira nos exemplos abaixo o conteúdo de resposta desse serviço.

@@ -33,7 +33,7 @@ Vendedores podem ser uma Pessoa Física ou Jurídica e são parceiros do Marketp
 |   email               |   string  |   Endereço de email. Será utilizado como login da conta.    |   sim          |   50       |
 |   phone               |   string  |   Telefone ou Celular                                       |   sim          |   -        |
 |   description         |   string  |   Descrição da Pessoa/Empresa                               |   não          |   255      |
-|   **address**         |   **Object**  |   **Dados do Endereço**                                 |   -          |   -        |
+|   **[address]**         |   **Object**  |   **Dados do Endereço**                                 |   -          |   -        |
 |   street              |   string  |   Logradouro (Rua, Av, Etc).                                |   não          |   70       |
 |   number              |   string  |   Número do Endereço                                        |   não          |   10       |
 |   district            |   string  |   Nome do Bairro do Endereço                                |   não          |   100      |
@@ -41,15 +41,17 @@ Vendedores podem ser uma Pessoa Física ou Jurídica e são parceiros do Marketp
 |   city                |   string  |   Nome da Cidade                                            |   não          |   50       |
 |   state               |   string  |   Sigla do Estado                                           |   não          |   2        |
 |   zipcode             |   string  |   CEP do Endereço                                           |   não          |   8        |
-|   **owner**           |   **Object**  |   **Dados do Responsável/Sócio (Quando Pessoa Jurídica)**  |   -          |   -        |
+|   **[owner]**           |   **Object**  |   **Dados do Responsável/Sócio (Quando Pessoa Jurídica)**  |   -          |   -        |
 |   name                |   string  |   Nome do Responsável/Sócio da Empresa                      |   não          |   80       |
 |   email               |   string  |   Endereço de e-mail do Responsável/Sócio da Empresa        |   não          |   50       |
 |   cpf                 |   string  |   CPF do Responsável/Sócio da Empresa                       |   não          |   -        |
 |   phone               |   string  |   Telefone ou Celular do Responsável/Sócio da Empresa       |   não          |   -        |
-|   **bank**            |   **Object**  |   **Dados Bancários da Empresa**                                |   -          |   -        |
+|   **[bank]**            |   **Object**  |   **Dados Bancários da Empresa**                                |   -          |   -        |
 |   code                |   string  |   Código do Banco                                           |   não          |   3        |
 |   agency              |   string  |   Número da Agência                                         |   não          |   4        |
 |   account             |   string  |   Número da Conta Corrente                                  |   não          |   10       |
+|   type                |   string  |   Tipo da Conta                                             |   não          |  'checkings' or 'savings' |
+|   external_id         |   string  |   ID Externo da Conta (Exemplo: E-mail registrado no PagSeguro)  |   não          |   120   |
 
 ### Conteúdo de envio
 Confira no exemplo abaixo o conteúdo que será enviado no `body` da requisição.
@@ -80,9 +82,11 @@ Confira no exemplo abaixo o conteúdo que será enviado no `body` da requisiçã
         "birthdate": "1988-03-29"
     },
     "bank": {
-        "code": "033",
-        "agency": "1000",
-        "account": "100333"
+        "code": "290",
+        "agency": "0001",
+        "account": "100500",
+        "type": "checkings",
+        "external_id": "teste@mail.me"
     }
 }
 ```
@@ -111,6 +115,8 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 |   email         |   string   |   Endereço de e-mail                                                |
 |   phone         |   string   |   Número do telefone ou celular                                     |
 |   description   |   string   |   Descrição do Vendedor                                             |
+|   created_at    |   date     |   Data em que o recurso foi criado                                  |
+|   updated_at    |   date     |   Última data que o recurso foi alterado                            |
 |   [**address**]     |   **Object**   |   **Objeto com os atributos do endereço.**                              |
 |   street        |   string   |   Logradouro (Rua, Av, Etc).                                        |
 |   number        |   string   |   Número do Endereço                                                |
@@ -127,8 +133,9 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 |   code          |   string   |   Código do Banco                                                   |
 |   agency        |   string   |   Número da Agência                                                 |
 |   account       |   string   |   Número da Conta                                                   |
-|   created_at    |   date     |   Data em que o recurso foi criado                                  |
-|   updated_at    |   date     |   Última data que o recurso foi alterado                            |
+|   type          |   string   |   Tipo da Conta                                                        |
+|   external_id   |   string   |   ID Externo da Conta (Exemplo: E-mail registrado no PagSeguro)  |
+
 
 ### Conteúdo de resposta
 Confira no exemplo abaixo o conteúdo de resposta desse serviço.
@@ -165,7 +172,9 @@ Confira no exemplo abaixo o conteúdo de resposta desse serviço.
         "bank": {
             "code": "033",
             "agency": "1000",
-            "account": "100333"
+            "account": "100333",
+            "type": "checkings",
+            "external_id": "teste@mail.me"
         },
         "created_at": "2020-06-17 00:00:00",
         "updated_at": "2020-06-17 00:00:00"
