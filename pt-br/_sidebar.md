@@ -23,14 +23,12 @@
     * <span class="verb httpPUT">PUT</span> [Alterar Vendedor](pt-br/sellers?id=alterar-vendedor)
     * <span class="verb httpGET">GET</span> [Consultar Vendedor](pt-br/sellers?id=consultar-vendedor)
     * <span class="verb httpGET">GET</span> [Listar Vendedores](pt-br/sellers?id=listar-vendedores)
-
 * **Regra de Split**
-    * [Overview](pt-br/split_rules?id=overview)
-    * <span class="verb httpPOST">POST</span> [Registrar Nova Regra de Split](pt-br/split_rules?id=registrar-nova-regra-de-split)
-    * <span class="verb httpGET">GET</span> [Consultar Regra de Split](pt-br/split_rules?id=consultar-regra-de-split)
-    * <span class="verb httpGET">GET</span> [Listar Regras de Split](pt-br/split_rules?id=listar-regras-de-split)
-    * <span class="verb httpDELETE">DELETE</span> [Deletar Regra de Split](pt-br/split_rules?id=deletar-regra-de-split)
-
+    * [Overview](pt-br/splitrules?id=overview)
+    * <span class="verb httpPOST">POST</span> [Registrar Nova Regra de Split](pt-br/splitrules?id=registrar-nova-regra-de-split)
+    * <span class="verb httpGET">GET</span> [Consultar Regra de Split](pt-br/splitrules?id=consultar-regra-de-split)
+    * <span class="verb httpGET">GET</span> [Listar Regras de Split](pt-br/splitrules?id=listar-regras-de-split)
+    * <span class="verb httpDELETE">DELETE</span> [Deletar Regra de Split](pt-br/splitrules?id=deletar-regra-de-split)
 * **Transferência**
     * [Overview](pt-br/transfers?id=overview)
     * <span class="verb httpGET">GET</span> [Listar Transferências](pt-br/transfers?id=listar-transferências)
