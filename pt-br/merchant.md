@@ -1,4 +1,4 @@
-# Estabelecimento {docsify-ignore-all}
+# Estabelecimento <!-- {docsify-ignore-all} -->
 
 ## Overview
 

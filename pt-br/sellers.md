@@ -1,4 +1,4 @@
-# Vendedor {docsify-ignore-all}
+# Vendedor <!-- {docsify-ignore-all} -->
 
 ## Overview
 

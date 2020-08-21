@@ -1,4 +1,4 @@
-# Regras de Split {docsify-ignore-all}
+# Regras de Split <!-- {docsify-ignore-all} -->
 
 ## Overview
 

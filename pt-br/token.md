@@ -1,4 +1,4 @@
-# Tokenização de Cartão de Crédito {docsify-ignore-all}
+# Tokenização de Cartão de Crédito <!-- {docsify-ignore-all} -->
 
 ## Novo Token
 

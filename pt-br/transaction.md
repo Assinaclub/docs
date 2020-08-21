@@ -1,4 +1,4 @@
-# Transação {docsify-ignore-all}
+# Transação <!-- {docsify-ignore-all} -->
 
 ## Overview
 
