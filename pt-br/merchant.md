@@ -8,7 +8,7 @@
 
 Este serviço realiza o processo de credenciamento de um Estabelecimento Comercial.
 
-## Credenciar Novo Estabelecimento
+## Novo Estabelecimento
 
 ---
 <span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/establishments

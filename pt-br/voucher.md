@@ -6,7 +6,7 @@
 > Vouchers são Transações que utilizam o Meio de Pagamento Voucher.
 
 
-## Registrar Voucher
+## Novo Voucher
 ---
 <span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/vouchers
 

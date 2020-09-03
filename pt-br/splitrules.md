@@ -4,7 +4,7 @@
 
 > Serviço responsável por gerenciar Regras de Split de uma Transação **pré-autorizada(5)**.
 
-## Registrar Nova Regra de Split
+## Nova Regra de Split
 ---
 <span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/split_rules?transaction={id}
 

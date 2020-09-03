@@ -13,7 +13,7 @@
     * <span class="verb httpGET">GET</span> [Consultar Token](pt-br/token?id=consultar-token)
 * **Estabelecimento**
     * [Overview](pt-br/merchant.md)
-    * <span class="verb httpPOST">POST</span> [Credenciar Novo Estabelecimento](pt-br/merchant?id=credenciar-novo-estabelecimento)
+    * <span class="verb httpPOST">POST</span> [Novo Estabelecimento](pt-br/merchant?id=novo-estabelecimento)
     * <span class="verb httpPUT">PUT</span> [Alterar Estabelecimento](pt-br/merchant?id=alterar-estabelecimento)
     * <span class="verb httpGET">GET</span> [Consultar Estabelecimento](pt-br/merchant?id=consultar-estabelecimento)
     * <span class="verb httpGET">GET</span> [Listar Estabelecimentos](pt-br/merchant?id=listar-estabelecimentos)
@@ -25,7 +25,7 @@
     * <span class="verb httpGET">GET</span> [Listar Vendedores](pt-br/sellers?id=listar-vendedores)
 * **Regra de Split**
     * [Overview](pt-br/splitrules?id=overview)
-    * <span class="verb httpPOST">POST</span> [Registrar Nova Regra de Split](pt-br/splitrules?id=registrar-nova-regra-de-split)
+    * <span class="verb httpPOST">POST</span> [Nova Regra de Split](pt-br/splitrules?id=nova-regra-de-split)
     * <span class="verb httpGET">GET</span> [Consultar Regra de Split](pt-br/splitrules?id=consultar-regra-de-split)
     * <span class="verb httpGET">GET</span> [Listar Regras de Split](pt-br/splitrules?id=listar-regras-de-split)
     * <span class="verb httpDELETE">DELETE</span> [Deletar Regra de Split](pt-br/splitrules?id=deletar-regra-de-split)
@@ -37,6 +37,9 @@
     * <span class="verb httpGET">GET</span> [Consultar Transferência de Vendedor](pt-br/transfers?id=consultar-transferência-de-vendedor)
     * <span class="verb httpGET">GET</span> [Listar Lançamentos Futuros](pt-br/future_transfers?id=listar-lançamentos-futuros)
     * <span class="verb httpGET">GET</span> [Listar Lançamentos Futuros de Vendedor](pt-br/future_transfers?id=listar-lançamentos-futuros-de-vendedor)
+* **Link de Pagamento**
+    * [Overview](pt-br/linkdepagamento?id=overview)
+    * <span class="verb httpPOST">POST</span> [Novo Link de Pagamento](pt-br/linkdepagamento?id=novo-link-de-pagamento)
 * **Voucher**
     * [Overview](pt-br/voucher?id=overview)
-    * <span class="verb httpPOST">POST</span> [Registrar Voucher](pt-br/voucher?id=registrar-voucher)
+    * <span class="verb httpPOST">POST</span> [Novo Voucher](pt-br/voucher?id=novo-voucher)
