@@ -11,6 +11,12 @@
 * **Tokenizar**
     * <span class="verb httpPOST">POST</span> [Novo Token](pt-br/token?id=novo-token)
     * <span class="verb httpGET">GET</span> [Consultar Token](pt-br/token?id=consultar-token)
+* **Cobrança**
+    * [Overview](pt-br/charge?id=overview)
+    * <span class="verb httpPOST">POST</span> [Novo Cobrança](pt-br/charge?id=nova-cobrança)
+    * <span class="verb httpPUT">PUT</span> [Alterar Cobrança](pt-br/charge?id=alterar-cobrança)
+    * <span class="verb httpGET">GET</span> [Consultar Cobrança](pt-br/charge?id=consultar-cobrança)
+    * <span class="verb httpGET">GET</span> [Listar Cobrança](pt-br/charge?id=listar-cobrança)
 * **Estabelecimento**
     * [Overview](pt-br/merchant.md)
     * <span class="verb httpPOST">POST</span> [Novo Estabelecimento](pt-br/merchant?id=novo-estabelecimento)
