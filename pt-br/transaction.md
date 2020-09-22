@@ -233,7 +233,7 @@ Em caso de sucesso:
 ## Consultar Transação
 
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/transaction?id={id}
+<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/transactions?id={id}
 
 ---
 
@@ -365,7 +365,7 @@ Em caso de sucesso:
 }
 ```
 
-Em caso de transferência não encontrada:
+Em caso de transação não encontrada:
 
 ```json
 {

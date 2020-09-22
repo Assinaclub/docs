@@ -3,7 +3,14 @@
 
 * [**Home**](/)
 * [**Autenticação**](pt-br/auth.md)
-* [**Pagamento**](pt-br/payment.md)
+* **Pagamento**
+    * [Overview](pt-br/payment?id=overview)
+    * <span class="verb httpPOST">POST</span> [Criar Pagamento](pt-br/payment?id=criar-pagamento)
+    * <span class="verb httpGET">GET</span> [Consultar Pagamento](pt-br/payment?id=consultar-pagamento-sonda)
+    * <span class="verb httpPOST">POST</span> [Capturar Pagamento](pt-br/payment?id=capturar-pagamento)
+    * <span class="verb httpPOST">POST</span> [Cancelar Pagamento](pt-br/payment?id=cancelar-pagamento)
+    * [Métodos de Pagamento](pt-br/payment_methods?id=metodos-de-pagamento)
+    * [Status de Pagamento](pt-br/payment_status?id=status-de-pagamento)
 * **Transação**
     * [Overview](pt-br/transaction?id=overview)
     * <span class="verb httpGET">GET</span> [Listar Transações](pt-br/transaction?id=listar-transações)
