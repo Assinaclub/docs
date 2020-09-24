@@ -219,6 +219,52 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
+> Exemplo de Pagamento com Tokenização do Cartão de Crédito
+
+```json
+{
+	"amount": 97.65,
+	"callback_url": "https://9a32ecb90e4cb7ef0f44d6262ec7b5d9.m.pipedream.net",
+	"payment": {
+		"type": "card",
+		"method": "visa",
+		"installments": 1,
+		"card": {
+			"tokenize": true,
+			"holder": "FULANO DA SILVA",
+			"number": "4532 2876 7749 2847",
+			"expiry_month": "03",
+			"expiry_year": "2021",
+			"cvv": "123"
+		}
+	},
+	"customer": {
+		"name": "Jack Jins",
+		"cpf_cnpj": "799.993.388-01"
+	}
+}
+```
+
+> Exemplo de Pagamento utilizando apenas o Token de Cartão
+
+```json
+{
+	"amount": 97.65,
+	"callback_url": "https://9a32ecb90e4cb7ef0f44d6262ec7b5d9.m.pipedream.net",
+	"payment": {
+		"type": "card",
+		"installments": 1,
+		"card": {
+			"token": "d2ce5a32-c67e-4c50-8726-f6fc43c477fb"
+		}
+	},
+	"customer": {
+		"name": "Jack Jins",
+		"cpf_cnpj": "799.993.388-01"
+	}
+}
+```
+
 > Exemplo de Pagamento via Cartão de Crédito com Criação de Assinatura|Cobrança Recorrente
 
 ```json
