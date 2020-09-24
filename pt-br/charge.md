@@ -6,7 +6,7 @@
 
 ## Nova Cobrança
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/charges
+<span class="verb httpPOST">POST</span> ***/service/resources/charges***
 
 ---
 
@@ -134,7 +134,7 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 ```
 
 ## Alterar Cobrança
-<span class="verb httpPUT">PUT</span> https://api.ipag.com.br/service/resources/charges?id={id}
+<span class="verb httpPUT">PUT</span> ***/service/resources/charges?id={id}***
 
 ### Parâmetros
 > Os parâmetros abaixo podem ser enviados em formato JSON
@@ -159,7 +159,7 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 ```
 
 ## Consultar Cobrança
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/charges?id={id}
+<span class="verb httpGET">GET</span> ***/service/resources/charges?id={id}***
 
 ## Listar Cobrança
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/charges
+<span class="verb httpGET">GET</span> ***/service/resources/charges***

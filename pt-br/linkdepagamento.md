@@ -6,7 +6,7 @@
 
 ## Novo Link de Pagamento
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/payment_links
+<span class="verb httpPOST">POST</span> ***/service/resources/payment_links***
 
 ---
 

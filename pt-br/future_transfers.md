@@ -6,7 +6,7 @@
 
 ## Listar Lançamentos Futuros
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/future_transfers
+<span class="verb httpGET">GET</span> ***/service/resources/future_transfers***
 
 ---
 
@@ -105,14 +105,14 @@ Em caso de sucesso:
 
 ## Listar Lançamentos Futuros de Vendedor
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/future_transfers?seller_id={id}
+<span class="verb httpGET">GET</span> ***/service/resources/future_transfers?seller_id={id}***
 
 ---
 
 Ou
 
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/future_transfers?cpf_cnpj={cpf_cnpj}
+<span class="verb httpGET">GET</span> ***/service/resources/future_transfers?cpf_cnpj={cpf_cnpj}***
 
 ---
 

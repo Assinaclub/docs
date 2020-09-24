@@ -10,7 +10,7 @@ Vendedores podem ser uma Pessoa Física ou Jurídica e são parceiros do Marketp
 
 ## Registrar Novo Vendedor
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/sellers
+<span class="verb httpPOST">POST</span> ***/service/resources/sellers***
 
 ---
 
@@ -197,7 +197,7 @@ Confira no exemplo abaixo o conteúdo de resposta desse serviço.
 
 ## Alterar Vendedor
 ---
-<span class="verb httpPUT">PUT</span> https://api.ipag.com.br/service/resources/sellers?id={id}
+<span class="verb httpPUT">PUT</span> ***/service/resources/sellers?id={id}***
 
 ---
 
@@ -215,12 +215,12 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisiçã
 
 ## Consultar Vendedor
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/sellers?id={id}
+<span class="verb httpGET">GET</span> ***/service/resources/sellers?id={id}***
 
 ---
 
 ## Listar Vendedores
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/sellers
+<span class="verb httpGET">GET</span> ***/service/resources/sellers***
 
 ---

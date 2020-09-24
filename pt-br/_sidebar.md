@@ -2,6 +2,7 @@
 <!--* <span class="verb httpGET">GET</span> [Guia](pt-br/guide.md)-->
 
 * [**Home**](/)
+* [**Ambientes**](pt-br/environment.md)
 * [**Autenticação**](pt-br/auth.md)
 * **Pagamento**
     * [Overview](pt-br/payment?id=overview)

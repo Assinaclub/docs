@@ -6,7 +6,7 @@
 
 ## Criar Pagamento
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/payment
+<span class="verb httpPOST">POST</span> ***/service/payment***
 
 ---
 
@@ -16,7 +16,7 @@
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
-| Api-Version | 2 |
+| x-api-version | 2 |
 
 ### Parâmetros
 > Os parâmetros abaixo devem ser enviados em formato JSON
@@ -452,7 +452,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 
 ## Consultar Pagamento (Sonda)
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/consult?id={id}
+<span class="verb httpGET">GET</span> ***/service/consult?id={id}***
 
 ---
 
@@ -462,7 +462,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
-| Api-Version | 2 |
+| x-api-version | 2 |
 
 !> Informar apenas um dos parâmetros abaixo
 
@@ -477,7 +477,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 
 ## Capturar Pagamento
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/capture?id={id}
+<span class="verb httpPOST">POST</span> ***/service/capture?id={id}***
 
 ---
 
@@ -487,7 +487,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
-| Api-Version | 2 |
+| x-api-version | 2 |
 
 !> Informar apenas um dos parâmetros abaixo
 
@@ -502,7 +502,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 
 ## Cancelar Pagamento
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/cancel?id={id}
+<span class="verb httpPOST">POST</span> ***/service/cancel?id={id}***
 
 ---
 
@@ -512,7 +512,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
-| Api-Version | 2 |
+| x-api-version | 2 |
 
 !> Informar apenas um dos parâmetros abaixo
 

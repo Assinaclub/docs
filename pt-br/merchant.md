@@ -11,7 +11,7 @@ Este serviço realiza o processo de credenciamento de um Estabelecimento Comerci
 ## Novo Estabelecimento
 
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/establishments
+<span class="verb httpPOST">POST</span> ***/service/resources/establishments***
 
 ---
     
@@ -164,12 +164,12 @@ Confira nos exemplos abaixo o conteúdo de resposta desse serviço.
 ```
 
 ## Alterar Estabelecimento
-<span class="verb httpPUT">PUT</span> https://api.ipag.com.br/service/resources/establishments?id={id}
+<span class="verb httpPUT">PUT</span> ***/service/resources/establishments?id={id}***
 
 Recebe os mesmos atributos do credenciamento, com excessão da senha e e-mail.
 
 ## Consultar Estabelecimento
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/establishments?id={id}
+<span class="verb httpGET">GET</span> ***/service/resources/establishments?id={id}***
 
 ## Listar Estabelecimentos
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/establishments
+<span class="verb httpGET">GET</span> ***/service/resources/establishments***

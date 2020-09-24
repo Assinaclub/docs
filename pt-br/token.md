@@ -2,7 +2,7 @@
 
 ## Novo Token
 
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/card_tokens
+<span class="verb httpPOST">POST</span> ***/service/resources/card_tokens***
 
 ### Headers
 
@@ -190,4 +190,4 @@ Confira nos exemplos abaixo o conteúdo de resposta desse serviço.
     
 ## Consultar Token
 
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/card_tokens?token={token}
+<span class="verb httpGET">GET</span> ***/service/resources/card_tokens?token={token}***

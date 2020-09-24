@@ -6,7 +6,7 @@
 
 ## Lista Transferências
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/transfers
+<span class="verb httpGET">GET</span> ***/service/resources/transfers***
 
 ---
 
@@ -95,7 +95,7 @@ Em caso de sucesso:
 ## Consultar Transferência
 
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/transfers?id={id}
+<span class="verb httpGET">GET</span> ***/service/resources/transfers?id={id}***
 
 ---
 
@@ -217,7 +217,7 @@ Em caso de transferência não encontrada:
 ## Listar Transferência dos Vendedores
 
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/sellers_transfers
+<span class="verb httpGET">GET</span> ***/service/resources/sellers_transfers***
 
 ---
 
@@ -226,7 +226,7 @@ A estrutura segue o mesmo padrão do [Listar Transferências](pt-br/transfers?id
 
 ## Consultar Transferência de Vendedor
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/sellers_transfers?id={id}
+<span class="verb httpGET">GET</span> ***/service/resources/sellers_transfers?id={id}***
 
 ---
 

@@ -6,7 +6,7 @@
 
 ## Listar Transações
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/transactions
+<span class="verb httpGET">GET</span> ***/service/resources/transactions***
 
 ---
 
@@ -233,7 +233,7 @@ Em caso de sucesso:
 ## Consultar Transação
 
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/transactions?id={id}
+<span class="verb httpGET">GET</span> ***/service/resources/transactions?id={id}***
 
 ---
 

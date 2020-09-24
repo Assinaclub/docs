@@ -6,7 +6,7 @@
 
 ## Nova Regra de Split
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/split_rules?transaction={id}
+<span class="verb httpPOST">POST</span> ***/service/resources/split_rules?transaction={id}***
 
 ---
 
@@ -102,7 +102,7 @@ Confira no exemplo abaixo o conteúdo de resposta desse serviço.
 > Você pode consultar uma Regra de Split especifica de uma determinada Transação
 
 ---
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/split_rules?transaction={transaction_id}&id={split_rule_id}
+<span class="verb httpGET">GET</span> ***/service/resources/split_rules?transaction={transaction_id}&id={split_rule_id}***
 
 ---
 
@@ -118,7 +118,7 @@ Confira no exemplo abaixo o conteúdo de resposta desse serviço.
 
 > Você pode listar todas as Regras de Split de uma determinada Transação
 
-<span class="verb httpGET">GET</span> https://api.ipag.com.br/service/resources/split_rules?transaction={transaction_id}
+<span class="verb httpGET">GET</span> ***/service/resources/split_rules?transaction={transaction_id}***
 
 ---
 
@@ -133,7 +133,7 @@ Confira no exemplo abaixo o conteúdo de resposta desse serviço.
 
 !> Você pode deletar uma Regra de Split de uma determinada Transação que ainda não foi Capturada.
 
-<span class="verb httpDELETE">DELETE</span> https://api.ipag.com.br/service/resources/split_rules?transaction={transaction_id}&id={split_rule_id}
+<span class="verb httpDELETE">DELETE</span> ***/service/resources/split_rules?transaction={transaction_id}&id={split_rule_id}***
 
 ---
 

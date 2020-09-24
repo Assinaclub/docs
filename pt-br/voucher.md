@@ -8,7 +8,7 @@
 
 ## Novo Voucher
 ---
-<span class="verb httpPOST">POST</span> https://api.ipag.com.br/service/resources/vouchers
+<span class="verb httpPOST">POST</span> ***/service/resources/vouchers***
 
 ---
 
