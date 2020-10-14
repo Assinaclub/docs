@@ -2,7 +2,7 @@
 
 ## Overview
 
-> Serviço responsável por registrar e consultar Clientes.
+> Serviço responsável por gerenciar Clientes.
 
 ## Novo Cliente
 ---

@@ -6,7 +6,7 @@
 * [**Autenticação**](pt-br/auth.md)
 
 * **Cliente**
-    * [Overview](pt-br/payment?id=overview)
+    * [Overview](pt-br/customer?id=overview)
     * <span class="verb httpPOST">POST</span> [Novo Cliente](pt-br/customer?id=novo-cliente)
     * <span class="verb httpPUT">PUT</span> [Alterar Cliente](pt-br/customer?id=alterar-cliente)
     * <span class="verb httpGET">GET</span> [Consultar Cliente](pt-br/customer?id=consultar-cliente)
