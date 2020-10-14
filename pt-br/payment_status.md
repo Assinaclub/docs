@@ -8,7 +8,7 @@
 | 2      | WAITING PAYMENT    | Boleto Impresso          |
 | 3      | CANCELED           | Cancelado                |
 | 4      | IN ANALISYS        | Em análise               |
-| 5      | AUTHORIZED         | Autorizado               |
+| 5      | PRE AUTHORIZED     | Pré-Autorizado           |
 | 6      | PARTIAL CAPTURED   | Autorizado Valor Parcial |
 | 7      | DECLINED           | Recusado                 |
 | 8      | CAPTURED           | Aprovado e Capturado     |

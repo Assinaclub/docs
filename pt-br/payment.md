@@ -366,6 +366,116 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 | 406    | Não aceito. Algum dado pode ser inválido verifique os dados enviados no body.                      |
 | 200    | Pagamento criado.                                                                                  |
 
+### Estrutura do conteúdo de resposta
+Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
+
+| Atributo | Tipo | Descrição |
+|-|-|-|
+| id | numeric | ID da Transação |
+| uuid | string | Identificação   única da Transação |
+| resource | string | Tipo do Recurso |
+| [**attributes**]&#9660; | **Object** | Dados   da Transação |
+| seller_id | string | Identificação única do vendedor |
+| order_id | string | Identificação   externa do número do pedido |
+| amount | numeric | Valor da Transação |
+| installments | numeric | Número   de Parcelas da Transação |
+| tid | string | Identificação Externa Única da   Transação (Definido pela Adquirente) |
+| authorization_id | string | Identificação   Externa da Autorização (Definido pela Adquirente) |
+| method | string | Método   de Pagamento da Transação |
+| captured_amount | numeric | Valor Capturado da Transação |
+| captured_at | datetime | Data   em que a Transação foi capturada |
+| url_authentication | string | Link de Autenticação para   Transações Autenticadas e de Débito |
+| callback_url | string | Url   de Callback da Transação |
+| created_at | datetime | Data   de Criação da Transação |
+| updated_at | datetime | Data da última atualização   da Transação |
+| [**status**]&#9660; | **Object** | Dados do Estado da Transação |
+| status.code | numeric | Código   do Status da Transação [Status de Pagamento](pt-br/payment_status?id=status-de-pagamento) |
+| status.message | string | Mensagem do Status da Transação |
+| [**acquirer**]&#9660; | **Object** | Dados da Adquirente |
+| acquirer.name | string | Nome   da Adquirente |
+| acquirer.message | string | Mensagem da Adquirente |
+| acquirer.code | string | Código   de Retorno da Adquirente |
+| [**boleto**]&#9660; | **Object** | Dados do Boleto (Somente para   Transações do Tipo Boleto) |
+| boleto.due_date | date | Data   de Vencimento do Boleto |
+| boleto.digitable_line | string | Linha Digitável do Boleto   (Algumas adquirentes podem não retornar esta informação) |
+| boleto.link | string | Link   do Boleto |
+| [**card**]&#9660; | **Object** | Dados do Cartão |
+| card.holder | string | Titular   do Cartão |
+| card.number | string | Número Mascarado do Cartão (Bin   + Last4) |
+| card.expiry_month | string | Mês   de vencimento do Cartão |
+| card.expiry_year | string | Ano de vencimento do Cartão |
+| card.brand | string | Bandeira   do Cartão |
+| card.token | string | Token do Cartão (Somente para   solicitações de tokenização) |
+| [**customer**]&#9660; | **Object** | Dados   do Cliente (Pagador) |
+| customer.name | string | Nome do Cliente |
+| customer.cpf_cnpj | string | CPF   ou CNPJ do Cliente |
+| customer.email | string | E-mail do Cliente |
+| customer.phone | string | Telefone   do Cliente |
+| [**customer.billing_address**]&#9660; | **Object** | Dados do Endereço de Cobrança do   Cliente |
+| customer.billing_address.street | string | Logradouro   (Rua, Avenida, Etc) do Endereço de Cobrança |
+| customer.billing_address.number | string | Número do Endereço de Cobrança |
+| customer.billing_address.district | string | Bairro   do Endereço de Cobrança |
+| customer.billing_address.complement | string | Complemento do Endereço de   Cobrança |
+| customer.billing_address.city | string | Cidade   do Endereço de Cobrança |
+| customer.billing_address.state | string | Estado do Endereço de Cobrança |
+| customer.billing_address.zipcode | string | CEP   do Endereço de Cobrança |
+| [**customer.shipping_address**]&#9660; | **Object** | Dados do Endereço de Entrega do   Cliente |
+| customer.shipping_address.street | string | Logradouro   (Rua, Avenida, Etc) do Endereço de Entrega |
+| customer.shipping_address.number | string | Número do Endereço de Entrega |
+| customer.shipping_address.district | string | Bairro   do Endereço de Entrega |
+| customer.shipping_address.complement | string | Complemento do Endereço de   Entrega |
+| customer.shipping_address.city | string | Cidade   do Endereço de Entrega |
+| customer.shipping_address.state | string | Estado do Endereço de Entrega |
+| customer.shipping_address.zipcode | string | CEP   do Endereço de Entrega |
+| [**subscription**]&#9660; | **Object** | Dados da Assinatura (Somente   para Transações que criam Assinaturas) |
+| [**products**]&#9660; | **List** | Lista dos Produtos |
+| products.[].name | string | Nome do Produto |
+| products.[].unit_price | numeric | Valor   Unitário do Produto |
+| products.[].quantity | numeric | Quantidade do Produto |
+| products.[].sku | string | Código   Externo do Produto |
+| [**antifraud**]&#9660; | **Object** | Dados da Análise de Fraude |
+| antifraud.score | numeric | Valor   de Score da Análise de Fraude |
+| antifraud.status | string | Status da Análise de Fraude |
+| antifraud.message | string | Mensagem   da Análise de Fraude |
+| [**split_rules**]&#9660; | **List** | Lista das Regras de Split |
+| split_rules.[].id | numeric | Identificação Única da Regra de Split |
+| split_rules.[].resource | string | Nome do Recurso |
+| split_rules.[].attributes | **Object** | Dados   da Regra de Split |
+| split_rules.[].attributes.receiver_id | string | Identificação Única do Recebedor |
+| split_rules.[].attributes.percentage | numeric | Valor   da Porcentagem (0.00 à 1.00) |
+| split_rules.[].attributes.amount | numeric | Valor Fixo |
+| split_rules.[].attributes.liable | boolean | Responsável   em caso de Chargeback |
+| split_rules.[].attributes.charge_processing_fee | boolean | Considera a Taxa da Adquirente   na Divisão |
+| split_rules.[].attributes.created_at | datetime | Data   de criação da Regra de Split |
+| split_rules.[].attributes.updated_at | datetime | Data de alteração da Regra de   Split |
+| [**receivables**]&#9660; | **Object** | Dados   dos Recebíveis da Transação (Somente para Sub-adquirência iPag) |
+| receivables.[].id | numeric | Identificação   Única do Recebível |
+| receivables.[].resource | string | Nome   do Recurso |
+| receivables.[].attributes | **Object** | Dados do Recebível |
+| receivables.[].attributes.receiver_id | string | ID   do Recebedor |
+| receivables.[].attributes.receiver_uuid | string | Identificação Única do Recebedor |
+| receivables.[].attributes.transaction | string | Identificação   Única da Transação |
+| receivables.[].attributes.status | string | Status do Recebível (`pending`,   `paid`, `canceled`, `refunded`, `blocked`) |
+| receivables.[].attributes.amount | numeric | Valor   Líquido do Recebível |
+| receivables.[].attributes.gross_amount | numeric | Valor Bruto do Recebível |
+| receivables.[].attributes.installment | numeric | Referência   da Parcela ( De 1 à 12) |
+| receivables.[].attributes.description | string | Descrição do Recebível |
+| receivables.[].attributes.paid_at | datetime | Data   em que o Recebível foi pago |
+| receivables.[].attributes.canceled_at | datetime | Data em queo Recebível foi   cancelado |
+| receivables.[].attributes.expected_on | datetime | Data   Esperada de pagamento do Recebível |
+| receivables.[].attributes.created_at | datetime | Data de criação do Recebível |
+| receivables.[].attributes.updated_at | datetime | Data   de alteração do Recebível |
+| [**history**] | **List** | Lista   do histórico da Transação |
+| history.[].amount | numeric | Valor da Transação para a   Operação |
+| history.[].type | string | Tipo   de Operação |
+| history.[].status | string | Status da Operação |
+| history.[].response_code | string | Código   de Resposta |
+| history.[].response_menssage | string | Mensagem da Resposta |
+| history.[].authorization_code | string | Código   de Autorização |
+| history.[].authorization_id | string | Identificação de autorização |
+| history.[].authorization_nsu | string | Número   Sequêncial Único da Transação |
+| history.[].created_at | datetime | Data de criação do histórico |
+
 #### Em caso de sucesso
 
 ```json
@@ -387,9 +497,11 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
     "method": "visa",
     "captured_amount": 0,
     "captured_at": "2020-09-21 14:38:26",
-    "acquirer": "simulated",
-    "acquirer_message": "transaction captured",
-    "acquirer_code": "",
+     "acquirer": {
+      "name": "simulated",
+      "message": "transaction canceled",
+      "code": ""
+    },
     "url_authentication": "",
     "callback_url": "https://99mystore.com.br/ipag/callback",
     "card": {
@@ -438,6 +550,9 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
       "message": "Transação aprovada pela Loja."
     },
     "split_rules": {
+      "data": []
+    },
+    "receivables": {
       "data": []
     },
     "history": [
