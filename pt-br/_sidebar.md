@@ -4,6 +4,16 @@
 * [**Home**](/)
 * [**Ambientes**](pt-br/environment.md)
 * [**Autenticação**](pt-br/auth.md)
+
+* **Cliente**
+    * [Overview](pt-br/payment?id=overview)
+    * <span class="verb httpPOST">POST</span> [Novo Cliente](pt-br/customer?id=novo-cliente)
+    * <span class="verb httpPUT">PUT</span> [Alterar Cliente](pt-br/customer?id=alterar-cliente)
+    * <span class="verb httpGET">GET</span> [Consultar Cliente](pt-br/customer?id=consultar-cliente)
+    * <span class="verb httpGET">GET</span> [Listar Clientes](pt-br/customer?id=listar-clientes)
+    * <span class="verb httpDELETE">DELETE</span> [Deletar Cliente](pt-br/customer?id=deletar-cliente)
+    
+
 * **Pagamento**
     * [Overview](pt-br/payment?id=overview)
     * <span class="verb httpPOST">POST</span> [Criar Pagamento](pt-br/payment?id=criar-pagamento)
