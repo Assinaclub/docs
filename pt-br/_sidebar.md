@@ -22,6 +22,15 @@
     * <span class="verb httpPOST">POST</span> [Cancelar Pagamento](pt-br/payment?id=cancelar-pagamento)
     * [Métodos de Pagamento](pt-br/payment_methods?id=metodos-de-pagamento)
     * [Status de Pagamento](pt-br/payment_status?id=status-de-pagamento)
+
+* **Planos**
+    * [Overview](pt-br/subscription_plan?id=overview)
+    * <span class="verb httpPOST">POST</span> [Novo Plano de Assinatura](pt-br/subscription_plan?id=novo-plano-de-assinatura)
+    * <span class="verb httpPUT">PUT</span> [Alterar Plano de assinatura](pt-br/subscription_plan?id=alterar-plano-de-assinatura)
+    * <span class="verb httpGET">GET</span> [Consultar Plano de Assinatura](pt-br/subscription_plan?id=consultar-plano-de-assinatura)
+    * <span class="verb httpGET">GET</span> [Listar Planos de Assinatura](pt-br/subscription_plan?id=listar-plano-de-assinatura)
+    * <span class="verb httpDELETE">DELETE</span> [Deletar Plano de Assinatura](pt-br/subscription_plan?id=deletar-plano-de-assinatura)
+
 * **Transação**
     * [Overview](pt-br/transaction?id=overview)
     * <span class="verb httpGET">GET</span> [Listar Transações](pt-br/transaction?id=listar-transações)
