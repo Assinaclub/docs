@@ -20,25 +20,18 @@
 
 | Atributo | Tipo | Descrição | Obrigatório | Tamanho |
 |:-:|:-:|:-:|:-:|:-:|
-| id | numeric | id do Cliente | Não | - |
-| uuid | string | id único do cliente | Não | - |
-| resource | string | Tipo do Recurso | Não | - |
-| attributes | Object | Dados do Cliente | Não | - |
-| attributes.is_active | boolean | Ativar ou desativar cliente | Sim | - |
-| attributes.nome | string | Nome do Cliente | Sim | 100 |
-| attributes.cpf_cnpj | string | CPF ou CNPJ do Cliente | Não | `cpf`ou `cnpj` |
-| attributes.email | string | Email do Cliente | Não | 80 |
-| attributes.phone | string | Telefone do Cliente | Não | 10 ou 11 |
-| attributes.address | Object | Dados de endereço do Cliente | Não | - |
-| attributes.address.street | string | Rua do endereço do Cliente | Não | 100 |
-| attributes.address.number | string | Número do endereço do Cliente | Não | 10 |
-| attributes.address.district | string | Nome do bairro ou distrito do Cliente | Não | 80 |
-| attributes.address.complement | string | Complemento do endereço do Cliente | Não | 50 |
-| attributes.address.city | string | Cidade do Cliente | Não | 80 |
-| attributes.address.state | string | Estado do Cliente | Não | 2 |
-| attributes.address.zip_code | string | CEP do Cliente | Não | 8 |
-| attributes.created_at | date | Data de Cadastro do Cliente | Não | `Y-m-d` ou `d/m/Y` |
-| attributes.updated_at | date | Data de última modificação de dados do Cliente | Não | `Y-m-d` ou `d/m/Y` |
+| nome | string | Nome do Cliente | Sim | 100 |
+| cpf_cnpj | string | CPF ou CNPJ do Cliente | Não | `cpf`ou `cnpj` |
+| email | string | Email do Cliente | Não | 80 |
+| phone | string | Telefone do Cliente | Não | 10 ou 11 |
+| [**address**]&#9660; | **Object** | Dados de endereço do Cliente | Não | - |
+| address.street | string | Rua do endereço do Cliente | Não | 100 |
+| address.number | string | Número do endereço do Cliente | Não | 10 |
+| address.district | string | Nome do bairro ou distrito do Cliente | Não | 80 |
+| address.complement | string | Complemento do endereço do Cliente | Não | 50 |
+| address.city | string | Cidade do Cliente | Não | 80 |
+| address.state | string | Estado do Cliente | Não | 2 |
+| address.zip_code | string | CEP do Cliente | Não | 8 |
 
 ### Exemplo de Conteúdo a ser Enviado
 Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
@@ -60,6 +53,7 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 	}
 }
 ```
+
 ### Status de Retorno
 |   Código  |   Descrição                                                                                           |
 |-----------|-------------------------------------------------------------------------------------------------------|
@@ -67,6 +61,31 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 |   403     |   Não Autorizado. Sua conta não tem permissão para realizar essa ação.                                |
 |   406     |   Não aceito. Algum dado pode ser inválido verifique os dados enviados no body.                       |
 |   201     |   Recurso criado.    |
+
+### Estrutura do conteúdo de resposta
+Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
+
+| Atributo | Tipo | Descrição |
+|:-:|:-:|:-:|
+| id | numeric | ID do Cliente |
+| uuid | string | Identificação única do cliente |
+| resource | string | Tipo do Recurso |
+| [**attributes**]▼ | **Object** | Dados do Cliente |
+| is_active | boolean | Ativar ou desativar cliente |
+| nome | string | Nome do Cliente |
+| cpf_cnpj | string | CPF ou CNPJ do Cliente |
+| email | string | Email do Cliente |
+| phone | string | Telefone do Cliente |
+| created_at | date | Data de Cadastro do Cliente |
+| updated_at | date | Data de última modificação de dados do Cliente |
+| [**address**]▼ | **Object** | Dados de endereço do Cliente |
+| address.street | string | Rua do endereço do Cliente |
+| address.number | string | Número do endereço do Cliente |
+| address.district | string | Nome do bairro ou distrito do Cliente |
+| address.complement | string | Complemento do endereço do Cliente |
+| address.city | string | Cidade do Cliente |
+| address.state | string | Estado do Cliente |
+| address.zip_code | string | CEP do Cliente |
 
 #### Em caso de sucesso
 
