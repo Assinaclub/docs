@@ -7,13 +7,15 @@
 ## Novo Plano de Assinatura
 ---
 <span class="verb httpPOST">POST</span> ***/service/resources/plans***
+
 ---
 
-### Header
+### Headers
 
 | Campo | Valor |
 | ------------ | ------ |
 | Content-Type | application/json |
+| Accept | application/json |
 
 ### Parâmetros
 > Os parâmetros abaixo devem ser enviados em formato JSON
@@ -24,9 +26,9 @@
 |  description |  string |            Descrição do Plano            |     Sim     |               255              |
 |    amount    | numeric |              Preço do Plano              |     Sim     |                -               |
 |   frequency  |  string |     Frequência de pagamento do Plano     |     Sim     | `monthly`, `weekly` ou `daily` |
-|   interval   | numeric | Intervalo de pagamento do Plano em meses |     Sim     |             1 ~ 12             |
+|   interval   | numeric |     Intervalo de pagamento do Plano      |     Sim     |             1 ~ 12             |
 |    cycles    | numeric |        Ciclos de cobrança do Plano       |     Não     |                -               |
-|     trial    |  Object |   Dados do período promocional do Plano  |     Não     |                -               |
+|     [**trial**]&#9660;  |  **Object** |   Dados do período promocional do Plano  |     Não     |       -         |
 | trial.amount | numeric |        Preço promocional do Plano        |     Não     |                -               |
 | trial.cycles | numeric |  Ciclos de cobrança promocional do Plano |     Não     |                -               |
 
@@ -37,18 +39,18 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 ```json
 {
     "name": "PLANO GOLD",
-	"description": "Plano Gold com até 4 treinos por semana",
-	"amount": 99.00,
-	"frequency": "monthly",
-	"interval": 1,
-	"cycles": 0,
-	"best_day": true,
-	"pro_rated_charge": true,
-	"grace_period": 0,
-	"trial": {
-		"amount": 0,
-		"cycles": 0
-	}
+  "description": "Plano Gold com até 4 treinos por semana",
+  "amount": 99.00,
+  "frequency": "monthly",
+  "interval": 1,
+  "cycles": 0,
+  "best_day": true,
+  "pro_rated_charge": true,
+  "grace_period": 0,
+  "trial": {
+    "amount": 0,
+    "cycles": 0
+  }
 }
 ```
 ### Status de Retorno
@@ -62,24 +64,27 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 ### Estrutura do conteúdo de resposta
 Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 
-|         Atributo        |    Tipo    |                 Descrição                |
-|:-----------------------:|:----------:|:----------------------------------------:|
-|           type          |   string   |              Type = "plans"              |
-|            id           |   numeric  |                ID do Plano               |
-|    [**attributes**]▼    | **Object** |              Dados do Plano              |
-|     attributes.name     |   string   |               Nome do plano              |
-|  attributes.description |   string   |            Descrição do plano            |
-|    attributes.amount    |   numeric  |              Preço do plano              |
-|   attributes.frequency  |   string   |     Frequência de pagamento do plano     |
-|   attributes.interval   |   numeric  | Intervalo de pagamento do plano em meses |
-|    attributes.cycles    |   numeric  |        Ciclos de cobrança do plano       |
-| [**attributes.trial**]▼ | **Object** |   Dados do período promocional do plano  |
-| attributes.trial.amount |   numeric  |        Preço promocional do plano        |
-| attributes.trial.cycles |   numeric  |  Ciclos de cobrança promocional do plano |
-|  attributes.created_at  |    date    |         Data de Cadastro do Plano        |
-|  attributes.updated_at  |    date    |        Data de atualização do Plano      |
+|         Atributo        |    Tipo    |                Descrição                |
+|:-----------------------:|:----------:|:---------------------------------------:|
+|           type          |   string   |             Tipo do Recurso             |
+|            id           |   numeric  |               ID do Plano               |
+|    [**attributes**]&#9660;    | **Object** |              Dados do Plano             |
+|           name          |   string   |              Nome do Plano              |
+|       description       |   string   |            Descrição do Plano           |
+|          amount         |   numeric  |              Preço do Plano             |
+|        frequency        |   string   |     Frequência de pagamento do Plano    |
+|         interval        |   numeric  |     Intervalo de pagamento do plano     |
+|          cycles         |   numeric  |       Ciclos de cobrança do plano       |
+|        created_at       |    date    |        Data de cadastro do Plano        |
+|        updated_at       |    date    |       Data de atualização do Plano      |
+|        [**links**]&#9660;     | **Object** |  Dados do período promocional do plano  |
+|       links.payment      |   string  |        Link de pagamento para criação de Assinatura       |
+|        [**trial**]&#9660;     | **Object** |  Dados do período promocional do plano  |
+|       trial.amount      |   numeric  |        Preço promocional do plano       |
+|       trial.cycles      |   numeric  | Ciclos de cobrança promocional do plano |
 
-#### Em caso de sucesso
+
+### Em caso de sucesso
 
 ```json
 {
@@ -107,10 +112,14 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
   }
 }
 ```
+
 ## Alterar Plano de Assinatura
+---
 <span class="verb httpPUT">PUT</span> ***/service/resources/plans?id={id}***
 
-### Header
+---
+
+### Headers
 
 | Campo | Valor |
 | ------------ | ------ |
@@ -130,10 +139,33 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 
 
 ## Consultar Plano de Assinatura
-<span class="verb httpGET">GET</span>***/service/resources/plans?id={id}***
+---
+<span class="verb httpGET">GET</span> ***/service/resources/plans?id={id}***
+
+---
+
+### Query Params
+
+|   Atributo  |   Tipo   |   Descrição                |
+|-------------|----------|----------------------------|
+|   id        |   string |   ID do Plano de Assinatura |
+
+
+
+> [Retorno da Consulta](pt-br/subscription_plan?id=em-caso-de-sucesso)
 
 ## Listar Planos de Assinatura
-<span class="verb httpGET">GET</span>***/service/resources/plans***
+---
+<span class="verb httpGET">GET</span> ***/service/resources/plans***
+
+---
 
 ## Deletar Plano de Assinatura
+---
 <span class="verb httpDELETE">DELETE</span> ***/service/resources/plans?id={id}***
+
+---
+
+> Em caso de sucesso o **Response** será `200 OK`
+
+!> Um Plano de Assinatura só poderá ser deletado se, e somente se não houver nenhuma assinatura utilizando-o.
