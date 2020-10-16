@@ -1,8 +1,8 @@
-# Planos <!-- {docsify-ignore-all} -->
+# Plano de Assinatura <!-- {docsify-ignore-all} -->
 
 ## Overview
 
-> Serviço responsável por gerenciar Planos.
+> Serviço responsável por gerenciar Planos de Assinatura.
 
 ## Novo Plano de Assinatura
 ---
@@ -20,15 +20,15 @@
 
 |   Atributo   |   Tipo  |                 Descrição                | Obrigatório |             Tamanho            |
 |:------------:|:-------:|:----------------------------------------:|:-----------:|:------------------------------:|
-|     name     |  string |               Nome do plano              |     Sim     |               255              |
-|  description |  string |            Descrição do plano            |     Sim     |               255              |
-|    amount    | numeric |              Preço do plano              |     Sim     |                -               |
-|   frequency  |  string |     Frequência de pagamento do plano     |     Sim     | `monthly`, `weekly` ou `daily` |
-|   interval   | numeric | Intervalo de pagamento do plano em meses |     Sim     |             1 ~ 12             |
-|    cycles    | numeric |        Ciclos de cobrança do plano       |     Não     |                -               |
-|     trial    |  Object |   Dados do período promocional do plano  |     Não     |                -               |
-| trial.amount | numeric |        Preço promocional do plano        |     Não     |                -               |
-| trial.cycles | numeric |  Ciclos de cobrança promocional do plano |     Não     |                -               |
+|     name     |  string |               Nome do Plano              |     Sim     |               255              |
+|  description |  string |            Descrição do Plano            |     Sim     |               255              |
+|    amount    | numeric |              Preço do Plano              |     Sim     |                -               |
+|   frequency  |  string |     Frequência de pagamento do Plano     |     Sim     | `monthly`, `weekly` ou `daily` |
+|   interval   | numeric | Intervalo de pagamento do Plano em meses |     Sim     |             1 ~ 12             |
+|    cycles    | numeric |        Ciclos de cobrança do Plano       |     Não     |                -               |
+|     trial    |  Object |   Dados do período promocional do Plano  |     Não     |                -               |
+| trial.amount | numeric |        Preço promocional do Plano        |     Não     |                -               |
+| trial.cycles | numeric |  Ciclos de cobrança promocional do Plano |     Não     |                -               |
 
 
 ### Exemplo de Conteúdo a ser Enviado
@@ -64,9 +64,9 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 
 |         Atributo        |    Tipo    |                 Descrição                |
 |:-----------------------:|:----------:|:----------------------------------------:|
-|           type          |   string   |                    ???                   |
-|            id           |   numeric  |                id do Plano               |
-|    [**attributes**]▼    | **Object** |              dados do Plano              |
+|           type          |   string   |              Type = "plans"              |
+|            id           |   numeric  |                ID do Plano               |
+|    [**attributes**]▼    | **Object** |              Dados do Plano              |
 |     attributes.name     |   string   |               Nome do plano              |
 |  attributes.description |   string   |            Descrição do plano            |
 |    attributes.amount    |   numeric  |              Preço do plano              |
@@ -77,7 +77,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 | attributes.trial.amount |   numeric  |        Preço promocional do plano        |
 | attributes.trial.cycles |   numeric  |  Ciclos de cobrança promocional do plano |
 |  attributes.created_at  |    date    |         Data de Cadastro do Plano        |
-|  attributes.updated_at  |    date    |          Data de update do Plano         |
+|  attributes.updated_at  |    date    |        Data de atualização do Plano      |
 
 #### Em caso de sucesso
 
@@ -100,7 +100,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
       "cycles": 0
     },
     "links": {
-      "payment": "https://core.ipag.test/subscriptions?id=7380ad8a673226ae47fce7bff88e9c33c69b66b3f569c61c97d58aa9b31f473bf6799881"
+      "payment": "https://api.ipag.com.br/subscriptions?id=7380ad8a673226ae47fce7bff88e9c33c69b66b3f569c61c97d58aa9b31f473bf6799881"
     },
     "created_at": "2020-10-09 16:24:08",
     "updated_at": "2020-10-09 16:24:08"

@@ -23,7 +23,7 @@
     * [Métodos de Pagamento](pt-br/payment_methods?id=metodos-de-pagamento)
     * [Status de Pagamento](pt-br/payment_status?id=status-de-pagamento)
 
-* **Planos**
+* **Plano de Assinatura**
     * [Overview](pt-br/subscription_plan?id=overview)
     * <span class="verb httpPOST">POST</span> [Novo Plano de Assinatura](pt-br/subscription_plan?id=novo-plano-de-assinatura)
     * <span class="verb httpPUT">PUT</span> [Alterar Plano de assinatura](pt-br/subscription_plan?id=alterar-plano-de-assinatura)
