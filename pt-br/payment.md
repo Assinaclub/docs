@@ -549,12 +549,8 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
       "status": "approved",
       "message": "Transação aprovada pela Loja."
     },
-    "split_rules": {
-      "data": []
-    },
-    "receivables": {
-      "data": []
-    },
+    "split_rules": [],
+    "receivables": [],
     "history": [
       {
         "amount": 100,

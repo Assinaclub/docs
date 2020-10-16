@@ -5,15 +5,6 @@
 * [**Ambientes**](pt-br/environment.md)
 * [**Autenticação**](pt-br/auth.md)
 
-* **Cliente**
-    * [Overview](pt-br/customer?id=overview)
-    * <span class="verb httpPOST">POST</span> [Novo Cliente](pt-br/customer?id=novo-cliente)
-    * <span class="verb httpPUT">PUT</span> [Alterar Cliente](pt-br/customer?id=alterar-cliente)
-    * <span class="verb httpGET">GET</span> [Consultar Cliente](pt-br/customer?id=consultar-cliente)
-    * <span class="verb httpGET">GET</span> [Listar Clientes](pt-br/customer?id=listar-clientes)
-    * <span class="verb httpDELETE">DELETE</span> [Deletar Cliente](pt-br/customer?id=deletar-cliente)
-    
-
 * **Pagamento**
     * [Overview](pt-br/payment?id=overview)
     * <span class="verb httpPOST">POST</span> [Criar Pagamento](pt-br/payment?id=criar-pagamento)
@@ -22,6 +13,21 @@
     * <span class="verb httpPOST">POST</span> [Cancelar Pagamento](pt-br/payment?id=cancelar-pagamento)
     * [Métodos de Pagamento](pt-br/payment_methods?id=metodos-de-pagamento)
     * [Status de Pagamento](pt-br/payment_status?id=status-de-pagamento)
+* **Cliente**
+    * [Overview](pt-br/customer?id=overview)
+    * <span class="verb httpPOST">POST</span> [Novo Cliente](pt-br/customer?id=novo-cliente)
+    * <span class="verb httpPUT">PUT</span> [Alterar Cliente](pt-br/customer?id=alterar-cliente)
+    * <span class="verb httpGET">GET</span> [Consultar Cliente](pt-br/customer?id=consultar-cliente)
+    * <span class="verb httpGET">GET</span> [Listar Clientes](pt-br/customer?id=listar-clientes)
+    * <span class="verb httpDELETE">DELETE</span> [Deletar Cliente](pt-br/customer?id=deletar-cliente)
+* **Plano de Assinatura**
+    * [Overview](pt-br/subscription_plan?id=overview)
+    * <span class="verb httpPOST">POST</span> [Novo Plano de Assinatura](pt-br/subscription_plan?id=novo-plano-de-assinatura)
+    * <span class="verb httpPUT">PUT</span> [Alterar Plano de assinatura](pt-br/subscription_plan?id=alterar-plano-de-assinatura)
+    * <span class="verb httpGET">GET</span> [Consultar Plano de Assinatura](pt-br/subscription_plan?id=consultar-plano-de-assinatura)
+    * <span class="verb httpGET">GET</span> [Listar Planos de Assinatura](pt-br/subscription_plan?id=listar-planos-de-assinatura)
+    * <span class="verb httpDELETE">DELETE</span> [Deletar Plano de Assinatura](pt-br/subscription_plan?id=deletar-plano-de-assinatura)
+
 * **Transação**
     * [Overview](pt-br/transaction?id=overview)
     * <span class="verb httpGET">GET</span> [Listar Transações](pt-br/transaction?id=listar-transações)
