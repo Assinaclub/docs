@@ -27,7 +27,7 @@
 | order_id | string | Número do Pedido (definido pela Loja) | não | 16 |
 | callback_url | string | URL   de callback | sim | 255 |
 | **[payment]** | **Object** | Dados do Pagamento | sim | - |
-| payment.type | string | Tipo   do Pagamento | sim | `card`   ou `boleto` |
+| payment.type | string | Tipo   do Pagamento | sim | `card`, `boleto` ou `pix` |
 | payment.method | string | Método de Pagamento | sim | 20 |
 | payment.installments | numeric | Parcelamento   definido | sim | 1   ~ 12 |
 | payment.capture | boolean | Definição se o Pagamento deve ser   capturado automaticamente | não | - |
@@ -358,6 +358,56 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
+> Exemplo de Pagamento via Pix (Completo)
+
+```json
+{
+    "amount": 97.86,
+    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "order_id": "1234567",
+    "payment": {
+        "type": "pix",
+        "method": "pix",
+    },
+    "customer": {
+        "name": "Fulano da Silva",
+        "cpf_cnpj": "79999338801",
+        "phone": "(11) 99719-2099",
+        "email": "fulano@mail.me",
+        "birthdate": "1989-03-28",
+        "ip": "192.168.0.1",
+        "billing_address": {
+            "street": "Rua Júlio Gonzalez",
+            "number": "1023",
+            "district": "Barra Funda",
+            "complement": "Sala 02",
+            "city": "São Paulo",
+            "state": "SP",
+            "zipcode": "01156-060"
+        },
+        "shipping_address": {
+            "street": "Rua Júlio Gonzalez",
+            "number": "1023",
+            "district": "Barra Funda",
+            "complement": "Sala 02",
+            "city": "São Paulo",
+            "state": "SP",
+            "zipcode": "01156-060"
+        }
+    },
+    "products": [
+        {
+            "name": "Luke Skywalker Lightsaber Blue",
+            "description": "Luke Skywalker Real Lightsaber in Blue",
+            "unit_price": 100.00,
+            "quantity": 1,
+            "sku": "LIGHTSIDE"
+        }
+    ]
+}
+```
+
+
 ### Status de Retorno
 | Código | Descrição                                                                                          |
 |--------|----------------------------------------------------------------------------------------------------|
@@ -399,6 +449,8 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 | boleto.due_date | date | Data   de Vencimento do Boleto |
 | boleto.digitable_line | string | Linha Digitável do Boleto   (Algumas adquirentes podem não retornar esta informação) |
 | boleto.link | string | Link   do Boleto |
+| [**pix**]&#9660; | **Object** | Dados do Pix (Somente para   Transações do Tipo Pix) |
+| pix.link | string | Link   do Pix |
 | [**card**]&#9660; | **Object** | Dados do Cartão |
 | card.holder | string | Titular   do Cartão |
 | card.number | string | Número Mascarado do Cartão (Bin   + Last4) |
@@ -588,6 +640,95 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
     ],
     "created_at": "2020-09-21 14:38:22",
     "updated_at": "2020-09-21 14:38:26"
+  }
+}
+```
+
+#### Em caso de sucesso (pix)
+
+```json
+{
+  "id": 1020921,
+  "uuid": "49e04b8dcd7fc9cb8a5fbd656404c8c0",
+  "resource": "transactions",
+  "attributes": {
+    "seller_id": "",
+    "order_id": "1234567",
+    "amount": 97.86,
+    "installments": 1,
+    "tid": "20201119110305889",
+    "authorization_id": "",
+    "status": {
+      "code": 2,
+      "message": "WAITING PAYMENT"
+    },
+    "method": "pix",
+    "captured_amount": 0,
+    "captured_at": "0000-00-00 00:00:00",
+    "acquirer": {
+      "name": "simulated",
+      "message": "Pix gerado",
+      "code": ""
+    },
+    "boleto": null,
+    "pix": {
+      "link": "https://api.ipag.com.br/pix?t=71d08e50ed9a7d0f20f0db8cacb20d03"
+    },
+    "url_authentication": "https://api.ipag.com.br/pix?t=49e04b8dcd7fc9cb8a5fbd656404c8c0",
+    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "card": null,
+    "customer": {
+      "name": "Fulano da Silva",
+      "cpf_cnpj": "79999338801",
+      "email": "fulano@mail.me",
+      "phone": "(11) 99719-2099",
+      "billing_address": {
+        "street": "RUA JULIO GONZALEZ",
+        "number": "1023",
+        "district": "BARRA FUNDA",
+        "complement": "SALA 02",
+        "city": "SAO PAULO",
+        "state": "SP",
+        "zip_code": "01156060"
+      },
+      "shipping_address": {
+        "street": "RUA JULIO GONZALEZ",
+        "number": "1023",
+        "district": "BARRA FUNDA",
+        "complement": "SALA 02",
+        "city": "SAO PAULO",
+        "state": "SP",
+        "zip_code": "01156060"
+      }
+    },
+    "subscription": null,
+    "charge": null,
+    "products": [
+      {
+        "name": "Luke Skywalker Lightsaber Blue",
+        "unit_price": 100,
+        "quantity": 0,
+        "sku": "LIGHTSIDE"
+      }
+    ],
+    "antifraud": null,
+    "split_rules": [],
+    "receivables": [],
+    "history": [
+      {
+        "amount": 97.86,
+        "type": "created",
+        "status": "succeeded",
+        "response_code": "",
+        "response_message": "",
+        "authorization_code": "",
+        "authorization_id": "",
+        "authorization_nsu": "",
+        "created_at": "2020-11-19 11:02:55"
+      }
+    ],
+    "created_at": "2020-11-19 11:02:53",
+    "updated_at": "2020-11-19 11:03:06"
   }
 }
 ```
