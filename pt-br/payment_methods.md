@@ -32,3 +32,9 @@
 | **boletoitaushopline**      | Itaú            |
 | **boletoshopfacil**         | Bradesco        |
 | **boletobradesconet**       | Bradesco Net    |
+
+## Outros métodos
+
+| Método | Tipo |
+|-|-|
+| **pix** | Pagamento Instantâneo |
