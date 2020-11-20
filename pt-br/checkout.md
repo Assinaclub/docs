@@ -57,6 +57,7 @@
 | split_rules.*.receiver | string | Identificação Única do Vendedor   (Marketplace) | sim, se desejar criar a regra | 50 |
 | split_rules.*.percentage | numeric | Porcentagem que   será descontado do Valor da Transação | não | - |
 | split_rules.*.amount | numeric | Valor Fixo   Definido que será descontado do Valor da Transação | não | - |
+| seller_id | string | ID do Vendedor (Utilizado para realizar transações em nome do Vendedor) | não | 50 |
 
 ### Exemplo de Conteúdo a ser Enviado
 Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisição.
