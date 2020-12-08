@@ -16,7 +16,6 @@
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
-| x-api-version | 2 |
 
 ### Parâmetros
 > Os parâmetros abaixo devem ser enviados em formato JSON
@@ -58,6 +57,7 @@
 | split_rules.*.percentage | numeric | Porcentagem que   será descontado do Valor da Transação | não | - |
 | split_rules.*.amount | numeric | Valor Fixo   Definido que será descontado do Valor da Transação | não | - |
 | seller_id | string | ID do Vendedor (Utilizado para realizar transações em nome do Vendedor) | não | 50 |
+| expires_in | numeric | Quantidade de minutos para o Link de pagamento expirar. [`Padrão 1440 minutos`] | não | - |
 
 ### Exemplo de Conteúdo a ser Enviado
 Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisição.
@@ -116,7 +116,8 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
             "receiver": "654321mnbvcxzlkjhgfdsapoiuytrewq",
             "percentage": "20"
         }
-    ]
+    ],
+    "expires_in": 60
 }
 ```
 
@@ -131,6 +132,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 | [**attributes**]&#9660; | **Object** | Dados do Checkout |
 | token | string | Token do Checkout |
 | link | string | URL do Checkout |
+| expires_at | date | Data de Validade do Checkout |
 | created_at | date | Data de Criação do Checkout |
 | updated_at | date | Data da Última Atualização do Checkout |
 
@@ -143,6 +145,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
   "attributes": {
     "token": "v4b7043bv01938n1498n0809bh0a9834",
     "link": "https://api.ipag.com.br/vpos?checkout=v4b7043bv01938n1498n0809bh0a9834",
+    "created_at": "2020-11-05 15:59:13",
     "created_at": "2020-11-05 14:59:13",
     "updated_at": "2020-11-05 14:59:13"
   }
