@@ -1,25 +1,25 @@
-# Autenticação
+# Authentication
 
-> Para o que é utilizada a API KEY ? A API KEY é utilizada para realizar a autenticação para as operações na API do iPag.
+> What API KEY is used for? API KEY it is used to authenticate the iPag's API operations.
 
-## Como funciona
+## How it works
 
-A autenticação para a API ocorre através de HTTP [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication).
+The authentication to the API happens through HTTP [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication).
 
-Forneça seu login e sua chave secreta de API como o nome e senha de usuário de autenticação básico.
+You must provide your login and your secret API key as basic authentication user name and password.
 
-Toda a comunicação deve ser criptografada via SSL. O token de autenticação básica é reversível, no entanto, quando toda a comunicação é sobre HTTPS o contexto de segurança está completamente protegido. Um aplicativo deve enviar um HEADER HTTP Authorization contendo o nome de usuário e senha com cada solicitação.
+All the comunication must be encrypted via SSL. The basic auth token it is reversible, however, when all the commutication is using HTTPS the security context it is completely protected. An application must send an HEADER HTTP Authorization having the user name and password with each request.
 
-Todas as chamadas de API devem ser feitas em HTTPS para garantir a segurança.
+All the API calls must be done in HTTPS to ensure the security.
 
-Basic Auth é trivial para usar de bibliotecas cliente HTTP. Ferramentas como cURL fornecem opções de linha de comando correspondentes.
+Basic Auth it is essential to use HTTP client library. Some tools like cURL provides corresponding command line as an option.
 
-!> Você deve manter sua chave API segura não importa o quê! NÃO COMPARTILHE sua chave de API com ninguém, nem mesmo nos canais de suporte do iPag. Ninguém que represente de forma legítima o iPag nunca lhe pedirá sua chave da API!
+!> You must keep your API key safe, under any circumstances. DO NOT SHARE your API key with anybody, not even in iPag's support channel. Nobody legitimately from iPag will request your API key!
 
-## Como obter a sua Chave de API
+## How to get your API Key
 
-Acesse o Painel do iPag ou o painel da Sandbox, clique no seu nome, localizado no canto direito superior. Em seguida, clique em Minha Conta.
+Access the iPag's Painel or the Sandbox painel, click on yout name, at the right top corner. Then, click on My Account (Minha Conta).
 
-Veja o seu API_ID e API_KEY logo no início da página.
+See your API_ID and API_KEY right on the beginning of the page.
 
-!> Caso não possua uma API KEY em sua conta, faça a requisição para suporte@ipag.com.br.
+!> In case you do not have an API KEY in your account, do your request at suporte@ipag.com.br.
