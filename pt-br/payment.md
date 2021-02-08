@@ -451,6 +451,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 | boleto.link | string | Link   do Boleto |
 | [**pix**]&#9660; | **Object** | Dados do Pix (Somente para   Transações do Tipo Pix) |
 | pix.link | string | Link   do Pix |
+| pix.qrcode | string | Código do QR-Code para renderização |
 | [**card**]&#9660; | **Object** | Dados do Cartão |
 | card.holder | string | Titular   do Cartão |
 | card.number | string | Número Mascarado do Cartão (Bin   + Last4) |
@@ -672,7 +673,8 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
     },
     "boleto": null,
     "pix": {
-      "link": "https://api.ipag.com.br/pix?t=71d08e50ed9a7d0f20f0db8cacb20d03"
+      "link": "https://api.ipag.com.br/pix?t=71d08e50ed9a7d0f20f0db8cacb20d03",
+      "qrcode": "00020101021226780014br.gov.bcb.pix2556api.test.com/pix/v2/12345678-4321-1234-5678-12345678901252040000530398654045.005802BR5913EMPRESA TESTE6012Porto Alegre62070503***630492CA"
     },
     "url_authentication": "https://api.ipag.com.br/pix?t=49e04b8dcd7fc9cb8a5fbd656404c8c0",
     "callback_url": "https://99mystore.com.br/ipag/callback",
