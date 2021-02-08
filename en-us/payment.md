@@ -1,10 +1,10 @@
-# Pagamento <!-- {docsify-ignore-all} -->
+# Payment <!-- {docsify-ignore-all} -->
 
 ## Overview
 
-> Serviço responsável por Criar, Consultar, Cancelar e Capturar Pagamentos (Transações)
+> This service is responsible for create, query, cancel and capture Payments (transactions).
 
-## Criar Pagamento
+## Create Payment
 ---
 <span class="verb httpPOST">POST</span> ***/service/payment***
 
@@ -12,83 +12,83 @@
 
 ### Headers
 
-| Campo | Valor |
+| Field | Value |
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
 | x-api-version | 2 |
 
-### Parâmetros
-> Os parâmetros abaixo devem ser enviados em formato JSON
+### Parameters
+> The parameters below must be sent in JSON format.
 
-| Atributo | Tipo | Descrição | Obrigatório | Tamanho |
+| Attribute | Type | Description | Mandatory | Size |
 |:-:|:-:|:-:|:-:|:-:|
-| amount | numeric | Valor   do Pagamento | sim | - |
-| order_id | string | Número do Pedido (definido pela Loja) | não | 16 |
-| callback_url | string | URL   de callback | sim | 255 |
-| **[payment]** | **Object** | Dados do Pagamento | sim | - |
-| payment.type | string | Tipo   do Pagamento | sim | `card`, `boleto` ou `pix` |
-| payment.method | string | Método de Pagamento | sim | 20 |
-| payment.installments | numeric | Parcelamento   definido | sim | 1   ~ 12 |
-| payment.capture | boolean | Definição se o Pagamento deve ser   capturado automaticamente | não | - |
-| pament.fraud_analysis | boolean | Definição   se o Pagamento deverá ser consultado no Antifraude | não | - |
-| payment.softdescriptor | string | Nome que irá aparecer na Fatura do   cartão. Seu funcionamento depende da funcionalidade estar habilitada na   adquirente. | não | 16 |
-| **[payment.card]** | **Object** | Dados   do Cartão de Crédito ou Débito | sim   se payment.type = `card` | - |
-| payment.card.holder | string | Nome do Titular do Cartão | sim se payment.type = `card` | 50 |
-| payment.card.number | string | Número   do Cartão | sim   se payment.type = `card` | 19 |
-| payment.card.expiry_month | string | Mês de validade do cartão (Good Thru) | sim se payment.type = `card` | 2 |
-| payment.card.expiry_year | string | Ano   de validade do cartao (Good Thru) | sim   se payment.type = `card` | 4 |
-| payment.card.cvv | string | Código de segurança do Cartão | não | 3 ou 4 |
-| payment.card.token | string | Código   Tokenizado do Cartão | não | 36 |
-| payment.card.tokenize | boolean | Definição se o Cartão deve ser   tokenizado para futuros pagamentos | não | - |
-| **[payment.boleto]** | **Object** | Dados   do Boleto | não | - |
-| payment.boleto.due_date | date | Data de Vencimento do Boleto | sim se payment.type = `boleto` | `Y-m-d` ou `d/m/Y` |
-| payment.boleto.instructions | List | Lista   de Instruções que poderá ser definida no Boleto (depende do Boleto) | não | - |
-| payment.boleto.instructions.*.instruction | string | Instrução do Boleto | não | 70 |
-| **[customer]** | **Object** | Dados   do Cliente (Pagador) | sim | - |
-| customer.name | string | Nome do Cliente | sim | 80 |
-| customer.cpf_cnpj | string | CPF   ou CNPJ do Cliente (CPF se Pessoa Física ou CNPJ se Pessoa Juridica) | sim | `cpf`   ou `cnpj` |
-| customer.email | string | E-mail do Cliente | não | 80 |
-| customer.phone | string | Número   do Telefone ou Celular do Cliente | não | 10   ou 11 |
-| customer.birthdate | string | Data de Aniversário do Cliente | não | `Y-m-d` ou `d/m/Y` |
-| customer.ip | string | IP   do Cliente (Internet Protocol) | não | `ip` |
-| **[customer.billing_address]** | **Object** | Dados do Endereço de Cobrança do   Cliente | não | - |
-| customer.billing_address.street | string | Logradouro   (Rua, Avenida, etc) do Endereço de Cobrança | não | 100 |
-| customer.billing_address.number | string | Número do Endereço de Cobrança | não | 10 |
-| customer.billing_address.district | string | Bairro   do Endereço de Cobrança | não | 80 |
-| customer.billing_address.complement | string | Complemento do Endereço de Cobrança | não | 50 |
-| customer.billing_address.city | string | Cidade   do Endereço de Cobrança | não | 80 |
-| customer.billing_address.state | string | Estado do Endereço de Cobrança | não | 2 |
-| customer.billing_address.zipcode | string | CEP   do Endereço de Cobrança | não | 8 |
-| **[customer.shipping_address]** | **Object** | Dados do Endereço de Entrega do Cliente | não | - |
-| **[products]** | **List** | Lista   de Produtos | não | - |
-| products.*.name | string | Nome do Produto | não | 255 |
-| products.*.description | string | Descrição   do Produto | não | 255 |
-| products.*.unit_price | numeric | Valor Unitário do Produto | não | - |
-| products.*.quantity | numeric | Quantidade   de Produtos | não | - |
-| products.*.sku | string | Código do Produto | não | 50 |
-| **[subscription]** | **Object** | Dados   da Assinatura\|Cobrança Recorrente | não | - |
-| subscription.frequency | numeric | Frequência de Intervalos que será   cobrado o valor da Assinatura | sim, se deseja criar uma assinatura | 1 ~ 12 |
-| subscription.interval | string | Intervalo   de tempo que será cobrado o valor da Assinatura | sim,   se deseja criar uma assinatura | `day`,   `week`, `month` |
-| subscription.start_date | date | Data de início da Assinatura à partir   da primeira cobrança. | sim, se deseja criar uma assinatura | `Y-m-d` ou `d/m/Y` |
-| subscription.amount | numeric | Valor   da Assinatura | não | - |
-| subscription.installments | numeric | Parcelamento (Cartão) que será aplicado   no Valor da Assinatura | não | - |
-| subscription.cycles | numeric | Ciclos   de Cobrança da Assinatura | não | 0   ~ 120 |
-| **[subscription.trial]** | **Object** | Dados do Período Promocional da   Assinatura | não | - |
-| subscription.trial.amount | numeric | Valor   Promocional da Assinatura | não |  |
-| subscription.trial.cycles | numeric | Ciclos de Cobrança do Período   Promocional da Assinatura | não | 0 ~ 120 |
-| subscription.trial.frequency | numeric | Frequência   de Intervalos que será cobrado o Valor Promocional da Assinatura | não | 1   ~ 12 |
-| **[split_rules]** | **List** | Lista de Regras de Split | não | - |
-| split_rules.seller_id | string | Identificação   Única do Vendedor (Marketplace) | sim,   se desejar criar a regra | 50 |
-| split_rules.percentage | numeric | Porcentagem que será descontado do   Valor da Transação | não | - |
-| split_rules.amount | numeric | Valor   Fixo Definido que será descontado do Valor da Transação | não | - |
-| split_rules.liable | boolean | Define se valor deverá ser descontado   em caso de Chargeback | não | - |
-| split_rules.charge_processing_fee | boolean | Define   se deverá ser calculado a taxa da transação referente ao valor do split | não | - |
+| amount | numeric | Payment amount value | Yes | - |
+| order_id | string | Order ID Number (defined by the store) | no | 16 |
+| callback_url | string | Callback URL | yes | 255 |
+| **[payment]** | **Object** | Payment data | yes | - |
+| payment.type | string | Payment type | yes | `card`, `boleto` ou `pix` |
+| payment.method | string | Payment method | yes | 20 |
+| payment.installments | numeric | Number (quantity) of Installments | yes | 1   ~ 12 |
+| payment.capture | boolean | Payment should (true) or not (false) be automatically captured. | no | - |
+| pament.fraud_analysis | boolean | Payment should (true) or not (false) be queried by Anti Fraud system. | no | - |
+| payment.softdescriptor | string | Name that will appear on invoice card. This feature depends on being enabled on the acquirer. | no | 16 |
+| **[payment.card]** | **Object** | Credit or Debit card data. | yes, if payment.type = `card` | - |
+| payment.card.holder | string | Card owner's name. | yes, if payment.type = `card` | 50 |
+| payment.card.number | string | Card's number | yes, if payment.type = `card` | 19 |
+| payment.card.expiry_month | string | Good Thru month | yes, if payment.type = `card` | 2 |
+| payment.card.expiry_year | string | Good Thru year | yes, if payment.type = `card` | 4 |
+| payment.card.cvv | string | Card's security code | no | 3 ou 4 |
+| payment.card.token | string | Card's Tokened code | no | 36 |
+| payment.card.tokenize | boolean | Card should (true) or not (false) be tokened for future payments. | no | - |
+| **[payment.boleto]** | **Object** | Bank slip data | no | - |
+| payment.boleto.due_date | date | Bank slip due date. | yes, if payment.type = `boleto` | `Y-m-d` ou `d/m/Y` |
+| payment.boleto.instructions | List | Instruction list that will be able to be defined by the Bank slip (depends on the Bank slip) | no | - |
+| payment.boleto.instructions.*.instruction | string | Bank slip instruciton | no | 70 |
+| **[customer]** | **Object** | Customer's data (acquirer) | yes | - |
+| customer.name | string | Customer's name | yes | 80 |
+| customer.cpf_cnpj | string | Customer's CPF or CNPJ (CPF if it is personal account, CNPJ if it is business account) | yes | `cpf`   ou `cnpj` |
+| customer.email | string | Customer's email. | no | 80 |
+| customer.phone | string | Customer's phone | no | 10   ou 11 |
+| customer.birthdate | string | Customer's birth date | no | `Y-m-d` ou `d/m/Y` |
+| customer.ip | string | Customer's IP (Internet Protocol) | no | `ip` |
+| **[customer.billing_address]** | **Object** | Customer's billing address. | no | - |
+| customer.billing_address.street | string | Billing Address Public Place (street, avenue, etc) | no | 100 |
+| customer.billing_address.number | string |                    Billing Address number                    | no | 10 |
+| customer.billing_address.district | string | Billing Address district | no | 80 |
+| customer.billing_address.complement | string | Billing Address complement | no | 50 |
+| customer.billing_address.city | string | Billing Address city | no | 80 |
+| customer.billing_address.state | string | Billing Address state | no | 2 |
+| customer.billing_address.zipcode | string | Billing Address zip code | no | 8 |
+| **[customer.shipping_address]** | **Object** | Customer's Shipping Address data | no | - |
+| **[products]** | **List** | Products list | no | - |
+| products.*.name | string | Product name | no | 255 |
+| products.*.description | string | Product description | no | 255 |
+| products.*.unit_price | numeric | Product unit price | no | - |
+| products.*.quantity | numeric | Product quantity | no | - |
+| products.*.sku | string | Product code | no | 50 |
+| **[subscription]** | **Object** | Current Subscription\|Charge data | no | - |
+| subscription.frequency | numeric | Interval frequency that will be charged the Subscription amount | yes, in case you wish create a Subscription | 1 ~ 12 |
+| subscription.interval | string | Time interval that the Subscription will be charged | yes, in case you wish create a Subscription | `day`,   `week`, `month` |
+| subscription.start_date | date | Subscription start date since the first charge | yes, in case you wish create a Subscription | `Y-m-d` ou `d/m/Y` |
+| subscription.amount | numeric | Subscription Value | no | - |
+| subscription.installments | numeric | Installment (card) that will be applyed on the Subscription Value. | no | - |
+| subscription.cycles | numeric | Subscription Charges Cycles | no | 0   ~ 120 |
+| **[subscription.trial]** | **Object** | Trial period data | no | - |
+| subscription.trial.amount | numeric | Subscription Trial value | no |  |
+| subscription.trial.cycles | numeric |              Charge Cycles of the Trial Period               | no | 0 ~ 120 |
+| subscription.trial.frequency | numeric | Interval Frequency that the Trial Value will be charged. | no | 1   ~ 12 |
+| **[split_rules]** | **List** | Split Rule List | no | - |
+| split_rules.seller_id | string | Seller Unique ID (Marketplace) | yes, in case you wish create a Rule | 50 |
+| split_rules.percentage | numeric | Percentage that will be discounted from transaction value | no | - |
+| split_rules.amount | numeric | Fixed value defined that will be discounted from the Transaction Value | no | - |
+| split_rules.liable | boolean | Defines if the value will need to be discounted in case of Chargeback | no | - |
+| split_rules.charge_processing_fee | boolean | Defines if it will be needed to calculate the transaction fee that refers to the split value | no | - |
 
-### Exemplo de Conteúdo a ser Enviado
-Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisição.
+### Example of Sent Content
+Check out the Content that you can send on the body of the request below
 
-> Exemplo de Pagamento via Cartão de Crédito (Simples)
+> Example of Credit Card Payment (Simple)
 
 ```json
 {
@@ -114,7 +114,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Cartão de Crédito (Completo)
+> Example of Credit Card Payment (Complete)
 
 ```json
 {
@@ -164,7 +164,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Boleto (Completo)
+> Example of Bank slip payment (Complete)
 
 ```json
 {
@@ -219,7 +219,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento com Tokenização do Cartão de Crédito
+> Example of Payment with Credit Card Tokening
 
 ```json
 {
@@ -245,7 +245,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento utilizando apenas o Token de Cartão
+> Example of Payment using only Card's Token.
 
 ```json
 {
@@ -265,7 +265,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Cartão de Crédito com Criação de Assinatura|Cobrança Recorrente
+> Example of Payment via Credit Card with Creating an Subscription|Charge
 
 ```json
 {
@@ -309,7 +309,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Cartão de Crédito com Split de Pagamento
+> Example of Payment via Credit Card with Payment Split
 
 ```json
 {
@@ -358,7 +358,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Pix (Completo)
+> Example of Pix Payment (Complete)
 
 ```json
 {
@@ -408,127 +408,127 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 ```
 
 
-### Status de Retorno
-| Código | Descrição                                                                                          |
-|--------|----------------------------------------------------------------------------------------------------|
-| 401    | Não autenticado. Verifique se foi informado corretamente as chaves de API no Basic Authentication. |
-| 403    | Não Autorizado. Sua conta não tem permissão para realizar essa ação.                               |
-| 406    | Não aceito. Algum dado pode ser inválido verifique os dados enviados no body.                      |
-| 200    | Pagamento criado.                                                                                  |
+### Return Status
+| Código | Descrição                                                    |
+| ------ | ------------------------------------------------------------ |
+| 401    | Not authenticated. Check if Basic Authentication keys had been correctly informed. |
+| 403    | Not authorized. Your account has no permission to complete this action. |
+| 406    | Not accepted. Some sent data can be invalid, verify the data sent on request body. |
+| 200    | Payment created.                                             |
 
-### Estrutura do conteúdo de resposta
-Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
+### Response content structure
+Check it out on the example below the response content from this service.
 
 | Atributo | Tipo | Descrição |
 |-|-|-|
-| id | numeric | ID da Transação |
-| uuid | string | Identificação   única da Transação |
-| resource | string | Tipo do Recurso |
-| [**attributes**]&#9660; | **Object** | Dados   da Transação |
-| seller_id | string | Identificação única do vendedor |
-| order_id | string | Identificação   externa do número do pedido |
-| amount | numeric | Valor da Transação |
-| installments | numeric | Número   de Parcelas da Transação |
-| tid | string | Identificação Externa Única da   Transação (Definido pela Adquirente) |
-| authorization_id | string | Identificação   Externa da Autorização (Definido pela Adquirente) |
-| method | string | Método   de Pagamento da Transação |
-| captured_amount | numeric | Valor Capturado da Transação |
-| captured_at | datetime | Data   em que a Transação foi capturada |
-| url_authentication | string | Link de Autenticação para   Transações Autenticadas e de Débito |
-| callback_url | string | Url   de Callback da Transação |
-| created_at | datetime | Data   de Criação da Transação |
-| updated_at | datetime | Data da última atualização   da Transação |
-| [**status**]&#9660; | **Object** | Dados do Estado da Transação |
-| status.code | numeric | Código   do Status da Transação [Status de Pagamento](pt-br/payment_status?id=status-de-pagamento) |
-| status.message | string | Mensagem do Status da Transação |
-| [**acquirer**]&#9660; | **Object** | Dados da Adquirente |
-| acquirer.name | string | Nome   da Adquirente |
-| acquirer.message | string | Mensagem da Adquirente |
-| acquirer.code | string | Código   de Retorno da Adquirente |
-| [**boleto**]&#9660; | **Object** | Dados do Boleto (Somente para   Transações do Tipo Boleto) |
-| boleto.due_date | date | Data   de Vencimento do Boleto |
-| boleto.digitable_line | string | Linha Digitável do Boleto   (Algumas adquirentes podem não retornar esta informação) |
-| boleto.link | string | Link   do Boleto |
-| [**pix**]&#9660; | **Object** | Dados do Pix (Somente para   Transações do Tipo Pix) |
-| pix.link | string | Link   do Pix |
-| [**card**]&#9660; | **Object** | Dados do Cartão |
-| card.holder | string | Titular   do Cartão |
-| card.number | string | Número Mascarado do Cartão (Bin   + Last4) |
-| card.expiry_month | string | Mês   de vencimento do Cartão |
-| card.expiry_year | string | Ano de vencimento do Cartão |
-| card.brand | string | Bandeira   do Cartão |
-| card.token | string | Token do Cartão (Somente para   solicitações de tokenização) |
-| [**customer**]&#9660; | **Object** | Dados   do Cliente (Pagador) |
-| customer.name | string | Nome do Cliente |
-| customer.cpf_cnpj | string | CPF   ou CNPJ do Cliente |
-| customer.email | string | E-mail do Cliente |
-| customer.phone | string | Telefone   do Cliente |
-| [**customer.billing_address**]&#9660; | **Object** | Dados do Endereço de Cobrança do   Cliente |
-| customer.billing_address.street | string | Logradouro   (Rua, Avenida, Etc) do Endereço de Cobrança |
-| customer.billing_address.number | string | Número do Endereço de Cobrança |
-| customer.billing_address.district | string | Bairro   do Endereço de Cobrança |
-| customer.billing_address.complement | string | Complemento do Endereço de   Cobrança |
-| customer.billing_address.city | string | Cidade   do Endereço de Cobrança |
-| customer.billing_address.state | string | Estado do Endereço de Cobrança |
-| customer.billing_address.zipcode | string | CEP   do Endereço de Cobrança |
-| [**customer.shipping_address**]&#9660; | **Object** | Dados do Endereço de Entrega do   Cliente |
-| customer.shipping_address.street | string | Logradouro   (Rua, Avenida, Etc) do Endereço de Entrega |
-| customer.shipping_address.number | string | Número do Endereço de Entrega |
-| customer.shipping_address.district | string | Bairro   do Endereço de Entrega |
-| customer.shipping_address.complement | string | Complemento do Endereço de   Entrega |
-| customer.shipping_address.city | string | Cidade   do Endereço de Entrega |
-| customer.shipping_address.state | string | Estado do Endereço de Entrega |
-| customer.shipping_address.zipcode | string | CEP   do Endereço de Entrega |
-| [**subscription**]&#9660; | **Object** | Dados da Assinatura (Somente   para Transações que criam Assinaturas) |
-| [**products**]&#9660; | **List** | Lista dos Produtos |
-| products.[].name | string | Nome do Produto |
-| products.[].unit_price | numeric | Valor   Unitário do Produto |
-| products.[].quantity | numeric | Quantidade do Produto |
-| products.[].sku | string | Código   Externo do Produto |
-| [**antifraud**]&#9660; | **Object** | Dados da Análise de Fraude |
-| antifraud.score | numeric | Valor   de Score da Análise de Fraude |
-| antifraud.status | string | Status da Análise de Fraude |
-| antifraud.message | string | Mensagem   da Análise de Fraude |
-| [**split_rules**]&#9660; | **List** | Lista das Regras de Split |
-| split_rules.[].id | numeric | Identificação Única da Regra de Split |
-| split_rules.[].resource | string | Nome do Recurso |
-| split_rules.[].attributes | **Object** | Dados   da Regra de Split |
-| split_rules.[].attributes.receiver_id | string | Identificação Única do Recebedor |
-| split_rules.[].attributes.percentage | numeric | Valor   da Porcentagem (0.00 à 1.00) |
-| split_rules.[].attributes.amount | numeric | Valor Fixo |
-| split_rules.[].attributes.liable | boolean | Responsável   em caso de Chargeback |
-| split_rules.[].attributes.charge_processing_fee | boolean | Considera a Taxa da Adquirente   na Divisão |
-| split_rules.[].attributes.created_at | datetime | Data   de criação da Regra de Split |
-| split_rules.[].attributes.updated_at | datetime | Data de alteração da Regra de   Split |
-| [**receivables**]&#9660; | **Object** | Dados   dos Recebíveis da Transação (Somente para Sub-adquirência iPag) |
-| receivables.[].id | numeric | Identificação   Única do Recebível |
-| receivables.[].resource | string | Nome   do Recurso |
-| receivables.[].attributes | **Object** | Dados do Recebível |
-| receivables.[].attributes.receiver_id | string | ID   do Recebedor |
-| receivables.[].attributes.receiver_uuid | string | Identificação Única do Recebedor |
-| receivables.[].attributes.transaction | string | Identificação   Única da Transação |
-| receivables.[].attributes.status | string | Status do Recebível (`pending`,   `paid`, `canceled`, `refunded`, `blocked`) |
-| receivables.[].attributes.amount | numeric | Valor   Líquido do Recebível |
-| receivables.[].attributes.gross_amount | numeric | Valor Bruto do Recebível |
-| receivables.[].attributes.installment | numeric | Referência   da Parcela ( De 1 à 12) |
-| receivables.[].attributes.description | string | Descrição do Recebível |
-| receivables.[].attributes.paid_at | datetime | Data   em que o Recebível foi pago |
-| receivables.[].attributes.canceled_at | datetime | Data em queo Recebível foi   cancelado |
-| receivables.[].attributes.expected_on | datetime | Data   Esperada de pagamento do Recebível |
-| receivables.[].attributes.created_at | datetime | Data de criação do Recebível |
-| receivables.[].attributes.updated_at | datetime | Data   de alteração do Recebível |
-| [**history**] | **List** | Lista   do histórico da Transação |
-| history.[].amount | numeric | Valor da Transação para a   Operação |
-| history.[].type | string | Tipo   de Operação |
-| history.[].status | string | Status da Operação |
-| history.[].response_code | string | Código   de Resposta |
-| history.[].response_menssage | string | Mensagem da Resposta |
-| history.[].authorization_code | string | Código   de Autorização |
-| history.[].authorization_id | string | Identificação de autorização |
-| history.[].authorization_nsu | string | Número   Sequêncial Único da Transação |
-| history.[].created_at | datetime | Data de criação do histórico |
+| id | numeric | Transaction ID |
+| uuid | string | Transaction unique ID |
+| resource | string | Resource Type |
+| [**attributes**]&#9660; | **Object** | Transaction Data |
+| seller_id | string | Seller's unique ID |
+| order_id | string | External order's number ID |
+| amount | numeric | Transaction value |
+| installments | numeric | Transaction Installments number |
+| tid | string | External unique Transaction ID (defined by card acquirer) |
+| authorization_id | string | External Authorization ID (defined by card acquirer) |
+| method | string | Transaction payment method |
+| captured_amount | numeric | Captured Transaction's value |
+| captured_at | datetime | Date when Transaction was captured |
+| url_authentication | string | Authentication link for Authenticated Transactions and Debit Transactions |
+| callback_url | string | Transaction Callback URL |
+| created_at | datetime | Date of Transaction creation |
+| updated_at | datetime | Date of last Transaction update. |
+| [**status**]&#9660; | **Object** | Transaciton state Status |
+| status.code | numeric | Transaction status code [Payment Status](pt-br/payment_status?id=status-de-pagamento) |
+| status.message | string | Transaction status message |
+| [**acquirer**]&#9660; | **Object** | Card acquirer data |
+| acquirer.name | string | Card acquirer name |
+| acquirer.message | string | Card acquirer message |
+| acquirer.code | string | Card acquirer |
+| [**boleto**]&#9660; | **Object** | Bank slip data (only for Bank slip Transactions) |
+| boleto.due_date | date | Bank slip due date |
+| boleto.digitable_line | string | Bank slip digitable line  (some acquirers won't return this information) |
+| boleto.link | string | Bank slip Link |
+| [**pix**]&#9660; | **Object** | Pix data(only for Pix Transactions) |
+| pix.link | string | Pix link |
+| [**card**]&#9660; | **Object** | Card data |
+| card.holder | string | Card Holder (owner) |
+| card.number | string | Masked card number (Bin   + Last4) |
+| card.expiry_month | string | Card expiration month |
+| card.expiry_year | string | Card expiration Year |
+| card.brand | string | Card Brand |
+| card.token | string | Card Token (Only for tokenization requests) |
+| [**customer**]&#9660; | **Object** | Customer data (purchaser) |
+| customer.name | string | Customer Name |
+| customer.cpf_cnpj | string | Customer CPF or CNPJ |
+| customer.email | string | Customer email |
+| customer.phone | string | Customer Phone |
+| [**customer.billing_address**]&#9660; | **Object** | Customer's billing address data |
+| customer.billing_address.street | string | Billing adress Public Place (Street, Avenue, Etc) |
+| customer.billing_address.number | string | Billing adress number |
+| customer.billing_address.district | string | Billing adress district |
+| customer.billing_address.complement | string | Billing adress |
+| customer.billing_address.city | string | Billing adress city |
+| customer.billing_address.state | string | Billing adress state |
+| customer.billing_address.zipcode | string | Billing adress zip code |
+| [**customer.shipping_address**]&#9660; | **Object** | Customer shipping adress data |
+| customer.shipping_address.street | string | Shipping adress Public Place (Street, Avenue, Etc) |
+| customer.shipping_address.number | string | Shipping adress number |
+| customer.shipping_address.district | string | Shipping adress district |
+| customer.shipping_address.complement | string | Shipping adress complement |
+| customer.shipping_address.city | string | Shipping adress city |
+| customer.shipping_address.state | string | Shipping adress state |
+| customer.shipping_address.zipcode | string | Shipping adress zip code |
+| [**subscription**]&#9660; | **Object** | Subscription Data (Only for Transactions that created Subscriptions) |
+| [**products**]&#9660; | **List** | Product List |
+| products.[].name | string | Product Name |
+| products.[].unit_price | numeric | Product unit price |
+| products.[].quantity | numeric | Product quantity |
+| products.[].sku | string | Product external code |
+| [**antifraud**]&#9660; | **Object** | Anti fraud analysis data |
+| antifraud.score | numeric | Score Anti fraud analysis value |
+| antifraud.status | string | Anti fraud analysis status |
+| antifraud.message | string | Anti fraud analysis message |
+| [**split_rules**]&#9660; | **List** | Split rules list |
+| split_rules.[].id | numeric | Split rule unique ID |
+| split_rules.[].resource | string | Resource name |
+| split_rules.[].attributes | **Object** | Split rule data |
+| split_rules.[].attributes.receiver_id | string | Receiver unique ID |
+| split_rules.[].attributes.percentage | numeric | Percentage value (0.00 to 1.00) |
+| split_rules.[].attributes.amount | numeric | Fixed Value |
+| split_rules.[].attributes.liable | boolean | Liable in case of chargeback |
+| split_rules.[].attributes.charge_processing_fee | boolean | Considers (true) or not (false) the acquirer's charge processing fee |
+| split_rules.[].attributes.created_at | datetime | Split rule creation date |
+| split_rules.[].attributes.updated_at | datetime | Split rule update date |
+| [**receivables**]&#9660; | **Object** | Transaction's receivables data (only for iPag sub-acquiring) |
+| receivables.[].id | numeric | Receivable unique ID |
+| receivables.[].resource | string | Resource name |
+| receivables.[].attributes | **Object** | Receivable data |
+| receivables.[].attributes.receiver_id | string | Receivable ID |
+| receivables.[].attributes.receiver_uuid | string | Receivable unique ID |
+| receivables.[].attributes.transaction | string | Transaction unique ID |
+| receivables.[].attributes.status | string | Receivable Status (`pending`,   `paid`, `canceled`, `refunded`, `blocked`) |
+| receivables.[].attributes.amount | numeric | Receivable Liquid value |
+| receivables.[].attributes.gross_amount | numeric | Receivable Gross Value |
+| receivables.[].attributes.installment | numeric | Installment reference ( from 1 to 12) |
+| receivables.[].attributes.description | string | Receivable description |
+| receivables.[].attributes.paid_at | datetime | Date when Receivable was paid |
+| receivables.[].attributes.canceled_at | datetime | Date when Receivable was canceled |
+| receivables.[].attributes.expected_on | datetime | Expected Receivable payment date |
+| receivables.[].attributes.created_at | datetime | Date when Receivable was created |
+| receivables.[].attributes.updated_at | datetime | Receivable update date |
+| [**history**] | **List** | Transaction's history list |
+| history.[].amount | numeric | Transaction value for the operation |
+| history.[].type | string | Operation Type |
+| history.[].status | string | Operation Status |
+| history.[].response_code | string | Response Code |
+| history.[].response_menssage | string | Response message |
+| history.[].authorization_code | string | Authorization code |
+| history.[].authorization_id | string | Authorization ID |
+| history.[].authorization_nsu | string | Transaction's unique sequencial number |
+| history.[].created_at | datetime | History creation date |
 
-#### Em caso de sucesso
+#### In case of Success
 
 ```json
 {
@@ -644,7 +644,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 }
 ```
 
-#### Em caso de sucesso (pix)
+#### In case of Success (pix)
 
 ```json
 {
@@ -733,7 +733,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 }
 ```
 
-#### Em caso de falha (Exemplo)
+#### In case of failure (Example)
 
 ```json
 {
@@ -748,7 +748,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 }
 ```
 
-## Consultar Pagamento (Sonda)
+## Payment Query (Sonda)*
 ---
 <span class="verb httpGET">GET</span> ***/service/consult?id={id}***
 
@@ -756,24 +756,24 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 
 ### Headers
 
-| Campo | Valor |
+| Field | Value |
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
 | x-api-version | 2 |
 
-!> Informar apenas um dos parâmetros abaixo
+!> Send only one of the Params below
 
 ### Query Params
 
-|   Atributo  |   Tipo   |   Descrição                |
+|  Attribute  |   Type   |   Description           |
 |-------------|----------|----------------------------|
-|   id      |   string  |   Identificação única da Transação  |
-|   uuid      |   string  |   Identificação única da Transação  |
-|   tid      |   string  |   TID da Transação  |
-|   order_id      |   string  |   Número do Pedido informado na Transação  |
+|   id      |   string  |  Transaction Unique ID  |
+|   uuid      |   string  | Transaction Unique ID  |
+|   tid      |   string  |  Transaction's TID  |
+|   order_id      |   string  |  Order ID informed in Transaction  |
 
-## Capturar Pagamento
+## Payment Capturing
 ---
 <span class="verb httpPOST">POST</span> ***/service/capture?id={id}***
 
@@ -781,24 +781,24 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 
 ### Headers
 
-| Campo | Valor |
+| Field | Value |
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
 | x-api-version | 2 |
 
-!> Informar apenas um dos parâmetros abaixo
+!> Send only one of the Params below
 
 ### Query Params
 
-|   Atributo  |   Tipo   |   Descrição                |
+|  Attribute  |   Type   |   Description           |
 |-------------|----------|----------------------------|
-|   id      |   string  |   Identificação única da Transação  |
-|   uuid      |   string  |   Identificação única da Transação  |
-|   tid      |   string  |   TID da Transação  |
-|   order_id      |   string  |   Número do Pedido informado na Transação  |
+|   id      |   string  | Transaction Unique ID  |
+|   uuid      |   string  | Transaction Unique ID  |
+|   tid      |   string  | Transaction's TID  |
+|   order_id      |   string  | Order ID informed in Transaction  |
 
-## Cancelar Pagamento
+## Cancel Payment
 ---
 <span class="verb httpPOST">POST</span> ***/service/cancel?id={id}***
 
@@ -806,19 +806,19 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 
 ### Headers
 
-| Campo | Valor |
+| Field | Value |
 | ------------ | ------ |
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
 | x-api-version | 2 |
 
-!> Informar apenas um dos parâmetros abaixo
+!> Send only one of the Params below
 
 ### Query Params
 
-|   Atributo  |   Tipo   |   Descrição                |
+|  Attribute  |   Type   |   Description           |
 |-------------|----------|----------------------------|
-|   id      |   string  |   Identificação única da Transação  |
-|   uuid      |   string  |   Identificação única da Transação  |
-|   tid      |   string  |   TID da Transação  |
-|   order_id      |   string  |   Número do Pedido informado na Transação  |
+|   id      |   string  | Transaction Unique ID  |
+|   uuid      |   string  | Transaction Unique ID  |
+|   tid      |   string  | Transaction's TID  |
+|   order_id      |   string  |  Order ID informed in Transaction  |
