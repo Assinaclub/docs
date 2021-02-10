@@ -1,5 +1,5 @@
-<!-- docs/pt-br/_sidebar.md -->
-<!--* <span class="verb httpGET">GET</span> [Guia](pt-br/guide.md)-->
+<!-- docs/en-us/_sidebar.md -->
+<!--* <span class="verb httpGET">GET</span> [Guia](en-us/guide.md)-->
 
 * [**Home**](/)
 * [**Environments**](en-us/environment.md)
@@ -56,14 +56,14 @@
 * **Split Rule**
     * [Overview](en-us/splitrules?id=overview)
     * <span class="verb httpPOST">POST</span> [New Split Rule](en-us/splitrules?id=nova-regra-de-split)
-    * <span class="verb httpGET">GET</span> [Query Split Rule](pt-br/splitrules?id=consultar-regra-de-split)
+    * <span class="verb httpGET">GET</span> [Query Split Rule](en-us/splitrules?id=consultar-regra-de-split)
     * <span class="verb httpGET">GET</span> [List Split Rules](en-us/splitrules?id=listar-regras-de-split)
     * <span class="verb httpDELETE">DELETE</span> [Delete Split Rule](en-us/splitrules?id=deletar-regra-de-split)
 * **Transference**
     * [Overview](en-us/transfers?id=overview)
     * <span class="verb httpGET">GET</span> [List Transferences](en-us/transfers?id=listar-transferências)
     * <span class="verb httpGET">GET</span> [Query Transference](en-us/transfers?id=consultar-transferência)
-    * <span class="verb httpGET">GET</span> [List Seller's Transference](pt-br/transfers?id=listar-transferência-dos-vendedores)
+    * <span class="verb httpGET">GET</span> [List Seller's Transference](en-us/transfers?id=listar-transferência-dos-vendedores)
     * <span class="verb httpGET">GET</span> [Query Seller's Transference](en-us/transfers?id=consultar-transferência-de-vendedor)
     * <span class="verb httpGET">GET</span> [List Future Transfers](en-us/future_transfers?id=listar-lançamentos-futuros)
     * <span class="verb httpGET">GET</span> [List Seller's Future Transfers](en-us/future_transfers?id=listar-lançamentos-futuros-de-vendedor)

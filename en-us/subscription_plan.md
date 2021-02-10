@@ -125,7 +125,7 @@ Check out the example below the service's response content structure.
 | ------------ | ------ |
 | Content-Type | application/json |
 
-!> To update a Plan data use the same fields described in [Register New Plan](pt-br/subscription_plan?id=novo-plano) in the `body`.<br>In this case all the fields are optional
+!> To update a Plan data use the same fields described in [Register New Plan](en-us/subscription_plan?id=novo-plano) in the `body`.<br>In this case all the fields are optional
 .
 
 ### Example of Content to be sent
@@ -152,7 +152,7 @@ Check it out on the example below the content that you can send in the request b
 
 
 
-> [Query return](pt-br/subscription_plan?id=em-caso-de-sucesso)
+> [Query return](en-us/subscription_plan?id=em-caso-de-sucesso)
 
 ## List Subscription Plan 
 ---

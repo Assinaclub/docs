@@ -180,7 +180,7 @@ Check out the Content that you can send on the body of the request below.
 
 ---
 
-> [Request Response](pt-br/customer?id=em-caso-de-sucesso)
+> [Request Response](en-us/customer?id=em-caso-de-sucesso)
 
 ## List Customers
 ---

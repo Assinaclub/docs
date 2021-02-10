@@ -201,7 +201,7 @@ Check out in the example below this service's response content.
 
 ---
 
-!> To update Seller's data, use the same fields described in [Register new Seller's](pt-br/sellers?id=registrar-novo-vendedor)  `body`.<br>
+!> To update Seller's data, use the same fields described in [Register new Seller's](en-us/sellers?id=registrar-novo-vendedor)  `body`.<br>
 In this case all the fields are optional.
 
 ### Example of Content to be Sent

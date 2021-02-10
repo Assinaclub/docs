@@ -439,7 +439,7 @@ Check it out on the example below the response content from this service.
 | created_at | datetime | Date of Transaction creation |
 | updated_at | datetime | Date of last Transaction update. |
 | [**status**]&#9660; | **Object** | Transaciton state Status |
-| status.code | numeric | Transaction status code [Payment Status](pt-br/payment_status?id=status-de-pagamento) |
+| status.code | numeric | Transaction status code [Payment Status](en-us/payment_status?id=status-de-pagamento) |
 | status.message | string | Transaction status message |
 | [**acquirer**]&#9660; | **Object** | Card acquirer data |
 | acquirer.name | string | Card acquirer name |

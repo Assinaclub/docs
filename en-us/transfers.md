@@ -222,7 +222,7 @@ In case of any Transference found:
 ---
 
 ### 
-The structure follows the same pattern as [List Transferences](pt-br/transfers?id=listar-transferências).
+The structure follows the same pattern as [List Transferences](en-us/transfers?id=listar-transferências).
 
 ## Query Seller's Transference
 ---
@@ -237,4 +237,4 @@ The structure follows the same pattern as [List Transferences](pt-br/transfers?i
 |   id      |   string  |  Transference unique ID  |
 
 ### Response Content Structure
-The structure follows the same pattern as [Query Transference](pt-br/transfers?id=consultar-transferência).
+The structure follows the same pattern as [Query Transference](en-us/transfers?id=consultar-transferência).
