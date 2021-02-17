@@ -113,7 +113,7 @@ Check in the example below this service's response content structure
 |   id                  |   string   |   Transference ID in the system   |
 |   resource            |   string   |   Resource Type                     |
 |   **[attributes]**        |   **Object**   |   **Object with the resource attributes **   |
-|   transfer_number     |   boolean  |   Transference ID code   |
+|   transfer_number     |  string  |   Transference ID code   |
 |   transfer_source     |   string   | Where the resource has been transfered |
 |   status              |   string   |   Transference Status        |
 |   amount              |   string   |   Liquid Amount                      |
