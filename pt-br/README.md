@@ -1,4 +1,4 @@
-# Nova Documentação da API do iPag
+# Documentação da API do iPag <!-- {docsify-ignore-all} -->
 
 !> Atualizamos a forma como apresentamos a documentação da nossa API, com novos recursos. A versão anterior da documentação continua disponível https://docs.ipag.com.br, contudo não será mais atualizada.
 
