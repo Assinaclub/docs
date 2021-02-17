@@ -214,7 +214,7 @@ In case of any Transference found:
 }
 ```
 
-## List Sellers' Transferences
+## List Sellers Transferences
 
 ---
 <span class="verb httpGET">GET</span> ***/service/resources/sellers_transfers***

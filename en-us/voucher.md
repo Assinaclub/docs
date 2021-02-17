@@ -6,7 +6,7 @@
 > Vouchers are Transactions that use the Voucher Payment Method.
 
 
-## NewVoucher
+## New Voucher
 ---
 <span class="verb httpPOST">POST</span> ***/service/resources/vouchers***
 

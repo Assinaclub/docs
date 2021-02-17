@@ -1,10 +1,10 @@
-# Future Transferences <!-- {docsify-ignore-all} -->
+# Future Transfers <!-- {docsify-ignore-all} -->
 
 ## Overview
 
 > Service responsible for listing the future receivables
 
-## List Future Transferences
+## List Future Transfers
 ---
 <span class="verb httpGET">GET</span> ***/service/resources/future_transfers***
 
@@ -103,7 +103,7 @@ In case of success:
 }
 ```
 
-## List Future Seller's Transferences
+## List Future Seller's Transfers
 ---
 <span class="verb httpGET">GET</span> ***/service/resources/future_transfers?seller_id={id}***
 
