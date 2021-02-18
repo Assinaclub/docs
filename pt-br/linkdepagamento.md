@@ -105,3 +105,77 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
   "resource": "store.payment_link"
 }
 ```
+
+## Consultar Link de Pagamento
+---
+
+> Você pode listar todas as Transações de um determinado Link de Pagamento
+
+<span class="verb httpGET">GET</span> ***/service/resources/payment_links?external_code={external_code}***
+
+---
+
+### Query Params
+
+|   Atributo  |   Tipo   |   Descrição                |
+|-------------|----------|----------------------------|
+|   external_code    |   string  |   Código exclusivo do Link de Pagamento, definido pelo usuário  |
+|   id    |   numeric  |   Identificação única do Link de Pagamento  |
+
+#### Em caso de sucesso
+
+```json
+{
+  "id": 1000,
+  "resource": "payment_links",
+  "attributes": {
+    "uuid": "15e6d09b-704e-4a41-b1b5-ee8620686f5c",
+    "external_code": "130",
+    "amount": 0,
+    "description": "LINK DE PAGAMENTO SUPER BACANA",
+    "buttons": {
+      "enable": false,
+      "one": 0,
+      "two": 0,
+      "three": 0
+    },
+    "header": "Doe Agora",
+    "subHeader": "Doação destinada a campanha dos meninos desabrigados do Vale do Ribeira",
+    "expires_at": "2020-12-30 23:00:00",
+    "created_at": "2020-09-03 15:52:24",
+    "updated_at": "2020-09-03 15:52:24"
+  },
+  "links": {
+    "payment": "http://api.ipag.com.br/link?t=15e6d09b-704e-4a41-b1b5-ee8620686f5c"
+  },
+  "transactions": [
+    {
+      "id": 1023021,
+      "uuid": "bfce317932ecf18f03891b43b6969b13",
+      "resource": "transactions",
+      "attributes": {
+        "seller_id": "",
+        "order_id": "20210208105102",
+        "amount": 100,
+        "installments": 1,
+        "tid": "20210217114556769",
+        "authorization_id": "",
+        "status": {
+          "code": 2,
+          "message": "WAITING PAYMENT"
+        },
+        "method": "boletosimulado",
+        "captured_amount": 0,
+        "captured_at": "0000-00-00 00:00:00",
+        "acquirer": {
+          "name": "simulated",
+          "message": "Boleto impresso",
+          "code": ""
+        },
+        "created_at": "2021-02-17 11:45:56",
+        "updated_at": "2021-02-17 11:45:56"
+      }
+    }
+  ]
+}
+```
