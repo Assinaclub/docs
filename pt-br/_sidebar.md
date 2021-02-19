@@ -70,6 +70,7 @@
 * **Link de Pagamento**
     * [Overview](pt-br/linkdepagamento?id=overview)
     * <span class="verb httpPOST">POST</span> [Novo Link de Pagamento](pt-br/linkdepagamento?id=novo-link-de-pagamento)
+    * <span class="verb httpGET">GET</span> [Consultar Link de Pagamento](pt-br/linkdepagamento?id=consultar-link-de-pagamento)
 * **Checkout**
   * [Overview](pt-br/checkout?id=overview)
   * <span class="verb httpPOST">POST</span> [Novo Checkout](pt-br/checkout?id=criar-checkout)
