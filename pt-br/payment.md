@@ -514,7 +514,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 | receivables.[].attributes.installment | numeric | Referência   da Parcela ( De 1 à 12) |
 | receivables.[].attributes.description | string | Descrição do Recebível |
 | receivables.[].attributes.paid_at | datetime | Data   em que o Recebível foi pago |
-| receivables.[].attributes.canceled_at | datetime | Data em queo Recebível foi   cancelado |
+| receivables.[].attributes.canceled_at | datetime | Data em que o Recebível foi   cancelado |
 | receivables.[].attributes.expected_on | datetime | Data   Esperada de pagamento do Recebível |
 | receivables.[].attributes.created_at | datetime | Data de criação do Recebível |
 | receivables.[].attributes.updated_at | datetime | Data   de alteração do Recebível |

@@ -113,7 +113,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 |   id                  |   string   |   Identificação da transferência no sistema.        |
 |   resource            |   string   |   Tipo do Recurso                                   |
 |   **[attributes]**        |   **Object**   |   **Objeto com os atributos do recurso**                |
-|   transfer_number     |   boolean  |   Código identificador da transferência             |
+|   transfer_number     |  string  |   Código identificador da transferência             |
 |   transfer_source     |   string   |   Fonte para onde foi transferido o recurso         |
 |   status              |   string   |   Status da Transferência                           |
 |   amount              |   string   |   Valor Liquido                                     |
