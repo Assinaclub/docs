@@ -107,6 +107,7 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 ```
 
 ## Consultar Link de Pagamento
+
 ---
 
 > Você pode listar todas as Transações de um determinado Link de Pagamento
