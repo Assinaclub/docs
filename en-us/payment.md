@@ -27,7 +27,7 @@
 | order_id | string | Order ID Number (defined by the store) | no | 16 |
 | callback_url | string | Callback URL | yes | 255 |
 | **[payment]** | **Object** | Payment data | yes | - |
-| payment.type | string | Payment type | yes | `card`, `boleto` ou `pix` |
+| payment.type | string | Payment type | yes | `card`, `boleto` or `pix` |
 | payment.method | string | Payment method | yes | 20 |
 | payment.installments | numeric | Number (quantity) of Installments | yes | 1   ~ 12 |
 | payment.capture | boolean | Payment should (true) or not (false) be automatically captured. | no | - |
@@ -451,6 +451,7 @@ Check it out on the example below the response content from this service.
 | boleto.link | string | Bank slip Link |
 | [**pix**]&#9660; | **Object** | Pix data(only for Pix Transactions) |
 | pix.link | string | Pix link |
+| pix.qrcode | string | QR-Code code for rendering |
 | [**card**]&#9660; | **Object** | Card data |
 | card.holder | string | Card Holder (owner) |
 | card.number | string | Masked card number (Bin   + Last4) |
@@ -672,7 +673,8 @@ Check it out on the example below the response content from this service.
     },
     "boleto": null,
     "pix": {
-      "link": "https://api.ipag.com.br/pix?t=71d08e50ed9a7d0f20f0db8cacb20d03"
+      "link": "https://api.ipag.com.br/pix?t=71d08e50ed9a7d0f20f0db8cacb20d03",
+      "qrcode": "00020101021226780014br.gov.bcb.pix2556api.test.com/pix/v2/12345678-4321-1234-5678-12345678901252040000530398654045.005802BR5913EMPRESA TESTE6012Porto Alegre62070503***630492CA"
     },
     "url_authentication": "https://api.ipag.com.br/pix?t=49e04b8dcd7fc9cb8a5fbd656404c8c0",
     "callback_url": "https://99mystore.com.br/ipag/callback",
