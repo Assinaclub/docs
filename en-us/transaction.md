@@ -17,8 +17,23 @@
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
 
+### Query Params (Filters)
+
+| Attribute      | Type   | Description                        |
+|----------------|--------|------------------------------------|
+| transaction_id | number | Transaction Unique ID              |
+| order_id       | string | Transaction Order ID               |
+| status         | number | Transaction Status (de `1` a `10`) |
+| customer_name  | string | Customer Name                      |
+| method         | string | Payment Method                     |
+| from_date      | date   | Transaction Initial Date filter (`Y-m-d`)  |
+| to_date        | date   | Transaction Final Date filter (`Y-m-d`)   |
+| from_amount    | number | Transaction Inital Range Amount    |
+| to_amount      | number | Transaction Final Range Amount     |
+| order          | string | Result Ordering                    |
+
 ### Return Status
-| Código | Descrição                                                    |
+| Code | Descrição                                                    |
 | ------ | ------------------------------------------------------------ |
 | 401    | Not authenticated. Check if Basic Authentication keys had been correctly informed. |
 | 403    | Not authorized. Your account has no permission to complete this action. |

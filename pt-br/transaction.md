@@ -17,6 +17,21 @@
 | Content-Type | application/json |
 | Authorization | Basic `Token`|
 
+### Query Params (Filters)
+
+| Atributo       | Tipo   | Descrição                                          |
+|----------------|--------|----------------------------------------------------|
+| transaction_id | number | Identificação única da Transação                   |
+| order_id       | string | Numero do Pedido                                   |
+| status         | number | Status da Transação (de `1` a `10`)                |
+| customer_name  | string | Nome do Cliente                                    |
+| method         | string | Método de pagamento                                |
+| from_date      | date   | Data inicial do período que a Transação foi criada (`Y-m-d`) |
+| to_date        | date   | Data final do período que a Transação foi criada (`Y-m-d`)  |
+| from_amount    | number | Faixa de valor inicial de uma Transação            |
+| to_amount      | number | Faixa de valor final de uma Transação              |
+| order          | string | Ordernação dos Resultados                          |
+
 ### Status de Retorno
 |   Código  |   Descrição                                                                                           |
 |-----------|-------------------------------------------------------------------------------------------------------|

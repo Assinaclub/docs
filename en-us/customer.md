@@ -188,6 +188,17 @@ Check out the Content that you can send on the body of the request below.
 
 ---
 
+### Query Params (Filters)
+
+| Attribute | Type    | Description                           |
+|-----------|---------|---------------------------------------|
+| name      | string  | Customer name                         |
+| cpf_cnpj  | string  | Customer's CPF or CNPJ                |
+| email     | string  | Customer's e-mail                     |
+| phone     | string  | Customer's phone                      |
+| is_active | boolean | Customer's status (`true` ou `false`) |
+| order     | string  | Result Ordering (`asc` ou `desc`)     |
+
 ## Delete Customer
 ---
 <span class="verb httpDELETE">DELETE</span> ***/service/resources/customers?id={id}***

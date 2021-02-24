@@ -188,6 +188,17 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 
 ---
 
+### Query Params (Filters)
+
+| Atributo  | Tipo    | Descrição                            |
+|-----------|---------|--------------------------------------|
+| name      | string  | Nome do Cliente                      |
+| cpf_cnpj  | string  | CPF ou CNPJ do Cliente               |
+| email     | string  | E-mail do Cliente                    |
+| phone     | string  | Telefone do Cliente                  |
+| is_active | boolean | Status do Cliente (`true` ou `false`) |
+| order      | string | Ordernação dos Resultados (`asc` ou `desc`) |
+
 ## Deletar Cliente
 ---
 <span class="verb httpDELETE">DELETE</span> ***/service/resources/customers?id={id}***
