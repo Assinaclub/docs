@@ -33,6 +33,12 @@
 |   header  |   string  |   Texto do Header do Card do Link de pagamento.  |   não  |   30  |
 |   subHeader  |   string  |   Sub-texto do Header do Card do Link de Pagamento  |   não  |   60  |
 |   expireAt  |   datetime  |   Data de expiração do link (Y-m-d H:i:s)  |   sim  |   -  |
+|   **[checkout_settings]**  |   **Object**  |   Dados do Checkout  |   não  |   - |
+|   checkout_settings.max_installments  |   numeric  |  Parcelamento Máximo  |   não  |  `1` ~ `12`  |
+|   checkout_settings.interest_free_installments  |   numeric  |   Parcelamento Máximo Sem Juros  |   não  |  `1` ~ `12`  |
+|   checkout_settings.min_installment_value  |   numeric  |  Valor Mínimo da Parcela  |   não  |   -  |
+|   checkout_settings.interest  |   numeric  |  Valor dos Juros  |   não  |  `0.00` ~ `100.00`  |
+|   checkout_settings.payment_method  |  string  |  Métodos de Pagamentos habilitados  |  não  |  `all`, `creditcard`, `boleto`, `transfer`  |
 
 ### Exemplo de Conteúdo a ser Enviado
 Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
@@ -84,6 +90,13 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
     "expires_at": "2020-12-30 23:00:00",
     "created_at": "2020-09-03 15:52:24",
     "updated_at": "2020-09-03 15:52:24"
+  },
+  "checkout_settings": {
+    "max_installments": 12,
+    "interest_free_installments": 12,
+    "min_installment_value": 0.00,
+    "interest": 0.00,
+    "payment_method": "all"
   },
   "links": {
     "payment": "http://api.ipag.com.br/link?t=15e6d09b-704e-4a41-b1b5-ee8620686f5c"

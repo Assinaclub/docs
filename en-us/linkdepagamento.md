@@ -33,6 +33,12 @@
 |   header  |   string  |  Card's header text from the Payment Link.  |  no  |   30  |
 |   subHeader  |   string  | Card's header sub-text from the Payment Link. |  no  |   60  |
 |   expireAt  |   datetime  |  Expiration link date (Y-m-d H:i:s)  |  yes  |   -  |
+|   **[checkout_settings]**  |   **Object**  |   Checkout Data  |   no  |   - |
+|   checkout_settings.max_installments  |   numeric  |  Maximum Installments Value  |   no  |  `1` ~ `12`  |
+|   checkout_settings.interest_free_installments  |   numeric  |  Maximum Interest Free Installments  |   no  |  `1` ~ `12`  |
+|   checkout_settings.min_installment_value  |   numeric  |  Minimum Installment Amount |   no  |   -  |
+|   checkout_settings.interest  |   numeric  |  Interest Amount  |   no  |  `0.00` ~ `100.00`  |
+|   checkout_settings.payment_method  |  string  |  Enabled Payment Methods  |  no  |  `all`, `creditcard`, `boleto`, `transfer`  |
 
 ### Example of Content to be Sent
 Check out in the example below the content that you can send on request body.
@@ -84,6 +90,13 @@ Check out in the example below the content that you can send on request body.
     "expires_at": "2020-12-30 23:00:00",
     "created_at": "2020-09-03 15:52:24",
     "updated_at": "2020-09-03 15:52:24"
+  },
+  "checkout_settings": {
+    "max_installments": 12,
+    "interest_free_installments": 12,
+    "min_installment_value": 0.00,
+    "interest": 0.00,
+    "payment_method": "all"
   },
   "links": {
     "payment": "http://api.ipag.com.br/link?t=15e6d09b-704e-4a41-b1b5-ee8620686f5c"

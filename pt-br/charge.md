@@ -38,6 +38,12 @@
 |   customer.cpf_cnpj  |   string  |   CPF ou CNPJ do Cliente  |   não  |   CPF ou CNPJ  |
 |   customer.phone  |   string  |   Telefone ou Celular do Cliente  |   não  |   10 - 11  |
 |   customer.email  |   string  |   Email do Cliente  |   não  |   50  |
+|   **[checkout_settings]**  |   **Object**  |   Dados do Checkout  |   não  |   - |
+|   checkout_settings.max_installments  |   numeric  |  Parcelamento Máximo  |   não  |  `1` ~ `12`  |
+|   checkout_settings.interest_free_installments  |   numeric  |   Parcelamento Máximo Sem Juros  |   não  |  `1` ~ `12`  |
+|   checkout_settings.min_installment_value  |   numeric  |  Valor Mínimo da Parcela  |   não  |   -  |
+|   checkout_settings.interest  |   numeric  |  Valor dos Juros  |   não  |  `0.00` ~ `100.00`  |
+|   checkout_settings.payment_method  |  string  |  Métodos de Pagamentos habilitados |  não  |  `all`, `creditcard`, `boleto`, `transfer`  |
 
 ### Exemplo de Conteúdo a ser Enviado
 Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
@@ -111,6 +117,13 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
           "payment": null
         }
       ]
+    },
+    "checkout_settings": {
+      "max_installments": 12,
+      "interest_free_installments": 12,
+      "min_installment_value": 0.00,
+      "interest": 0.00,
+      "payment_method": "all"
     },
     "links": {
       "payment": "https://api.ipag.com.br/vpos?billing=0771fc6f0f4b1d7d1bb73bbbe14e0e31"
