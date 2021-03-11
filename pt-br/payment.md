@@ -33,6 +33,7 @@
 | payment.capture | boolean | Definição se o Pagamento deve ser   capturado automaticamente | não | - |
 | pament.fraud_analysis | boolean | Definição   se o Pagamento deverá ser consultado no Antifraude | não | - |
 | payment.softdescriptor | string | Nome que irá aparecer na Fatura do   cartão. Seu funcionamento depende da funcionalidade estar habilitada na   adquirente. | não | 16 |
+| payment.pix_expires_in | numeric | Quantidade de minutos para o pagamento Pix expirar. [`Padrão 1440 minutos`] | no | - |
 | **[payment.card]** | **Object** | Dados   do Cartão de Crédito ou Débito | sim   se payment.type = `card` | - |
 | payment.card.holder | string | Nome do Titular do Cartão | sim se payment.type = `card` | 50 |
 | payment.card.number | string | Número   do Cartão | sim   se payment.type = `card` | 19 |
@@ -368,6 +369,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
     "payment": {
         "type": "pix",
         "method": "pix",
+        "pix_expires_in": 60,
     },
     "customer": {
         "name": "Fulano da Silva",
