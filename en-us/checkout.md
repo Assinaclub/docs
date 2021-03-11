@@ -47,7 +47,7 @@
 | order.return_url | string | Callback URL | no | 255 |
 | order.return_type | string | Callback type | yes | `json` or `xml` |
 | [**products**]&#9660; | **List** | Product list | no | - |
-| products.*.name | string | Product name | no | 255 |
+| products.*.name | string | Product name | no | 100 |
 | products.*.unit_price | numeric | Product's unit price | no | - |
 | products.*.quantity | numeric | Product quantity | no | - |
 | products.*.sku | string | Product code | no | 50 |

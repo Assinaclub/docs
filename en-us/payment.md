@@ -62,7 +62,7 @@
 | customer.billing_address.zipcode | string | Billing Address zip code | no | 8 |
 | **[customer.shipping_address]** | **Object** | Customer's Shipping Address data | no | - |
 | **[products]** | **List** | Products list | no | - |
-| products.*.name | string | Product name | no | 255 |
+| products.*.name | string | Product name | no | 100 |
 | products.*.description | string | Product description | no | 255 |
 | products.*.unit_price | numeric | Product unit price | no | - |
 | products.*.quantity | numeric | Product quantity | no | - |

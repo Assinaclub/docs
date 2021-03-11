@@ -62,7 +62,7 @@
 | customer.billing_address.zipcode | string | CEP   do Endereço de Cobrança | não | 8 |
 | **[customer.shipping_address]** | **Object** | Dados do Endereço de Entrega do Cliente | não | - |
 | **[products]** | **List** | Lista   de Produtos | não | - |
-| products.*.name | string | Nome do Produto | não | 255 |
+| products.*.name | string | Nome do Produto | não | 100 |
 | products.*.description | string | Descrição   do Produto | não | 255 |
 | products.*.unit_price | numeric | Valor Unitário do Produto | não | - |
 | products.*.quantity | numeric | Quantidade   de Produtos | não | - |
