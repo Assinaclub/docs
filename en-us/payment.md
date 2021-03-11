@@ -33,6 +33,7 @@
 | payment.capture | boolean | Payment should (true) or not (false) be automatically captured. | no | - |
 | pament.fraud_analysis | boolean | Payment should (true) or not (false) be queried by Anti Fraud system. | no | - |
 | payment.softdescriptor | string | Name that will appear on invoice card. This feature depends on being enabled on the acquirer. | no | 16 |
+| payment.pix_expires_in | numeric |  Quantity of minutes that the Pix will take to expire. [`Standard 1440 minutes`] | no | - |
 | **[payment.card]** | **Object** | Credit or Debit card data. | yes, if payment.type = `card` | - |
 | payment.card.holder | string | Card owner's name. | yes, if payment.type = `card` | 50 |
 | payment.card.number | string | Card's number | yes, if payment.type = `card` | 19 |
@@ -368,6 +369,7 @@ Check out the Content that you can send on the body of the request below
     "payment": {
         "type": "pix",
         "method": "pix",
+        "pix_expires_in": 60,
     },
     "customer": {
         "name": "Fulano da Silva",
