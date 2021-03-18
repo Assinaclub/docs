@@ -32,8 +32,9 @@ Vendedores podem ser uma Pessoa Física ou Jurídica e são parceiros do Marketp
 |   cpf_cnpj            |   string  |   CPF ou CNPJ                                               |   sim          |   -        |
 |   email               |   string  |   Endereço de email. Será utilizado como login da conta.    |   sim          |   50       |
 |   phone               |   string  |   Telefone ou Celular                                       |   sim          |   -        |
+|   birthdate           |   date    |   Data de Nascimento (PF) ou Data de Abertura (PJ)          |  não |   `Y-m-d` ou `d/m/Y` |
 |   description         |   string  |   Descrição da Pessoa/Empresa                               |   não          |   255      |
-|   **[address]**         |   **Object**  |   **Dados do Endereço**                                 |   -          |   -        |
+|   **[address]**       |   **Object**  |   **Dados do Endereço**                                 |   -          |   -        |
 |   street              |   string  |   Logradouro (Rua, Av, Etc).                                |   não          |   70       |
 |   number              |   string  |   Número do Endereço                                        |   não          |   10       |
 |   district            |   string  |   Nome do Bairro do Endereço                                |   não          |   100      |
@@ -46,7 +47,8 @@ Vendedores podem ser uma Pessoa Física ou Jurídica e são parceiros do Marketp
 |   email               |   string  |   Endereço de e-mail do Responsável/Sócio da Empresa        |   não          |   50       |
 |   cpf                 |   string  |   CPF do Responsável/Sócio da Empresa                       |   não          |   -        |
 |   phone               |   string  |   Telefone ou Celular do Responsável/Sócio da Empresa       |   não          |   -        |
-|   **[bank]**            |   **Object**  |   **Dados Bancários da Empresa**                                |   -          |   -        |
+|   birthdate           |   date    |   Data de Nascimento do Responsável/Sócio da Empresa        |  não |   `Y-m-d` ou `d/m/Y` |
+|   **[bank]**          |   **Object**  |   **Dados Bancários da Empresa**                                |   -          |   -        |
 |   code                |   string  |   Código do Banco                                           |   não          |   3        |
 |   agency              |   string  |   Número da Agência                                         |   não          |   4        |
 |   account             |   string  |   Número da Conta Corrente                                  |   não          |   10       |

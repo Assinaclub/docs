@@ -32,6 +32,7 @@ Sellers can be an Individual Person or a Legal Entity, and they are Marketplace 
 |   cpf_cnpj            |   string  |   Seller's CPF or CNPJ                        |   yes        |   -        |
 |   email               |   string  |   Email address. It will be used as account's login   |   yes       |   50       |
 |   phone               |   string  |   Phone or Cellphone number          |   yes        |   -        |
+|   birthdate           |   date    |   birthdate                           |  no |   `Y-m-d` ou `d/m/Y` |
 |   description         |   string  |   Individual's description or Company's description   |   no         |   255      |
 |   **[address]**         |   **Object**  |   **Address data**                      |   -          |   -        |
 |   street              |   string  |   Public Place (Street, Avenue, Etc).        |   no         |   70       |
@@ -41,11 +42,12 @@ Sellers can be an Individual Person or a Legal Entity, and they are Marketplace 
 |   city                |   string  |   Address city                                |   no         |   50       |
 |   state               |   string  |   Address state                              |   no         |   2        |
 |   zipcode             |   string  |   Address zip code                            |   no         |   8        |
-|   **[owner]**           |   **Object**  | **Seller or business manager data** |   -          |   -        |
-|   name                |   string  | Seller/business manager name |   no         |   80       |
-|   email               |   string  | Seller/business manager email address |   no         |   50       |
-|   cpf                 |   string  | Seller/business manager CPF document |   no         |   -        |
-|   phone               |   string  | Seller/business manager phone number |   no         |   -        |
+|   **[owner]**           |   **Object**  | **Partner or Business manager data** |   -          |   -        |
+|   name                |   string  | Partner/Business manager name |   no         |   80       |
+|   email               |   string  | Partner/Business manager email address |   no         |   50       |
+|   cpf                 |   string  | Partner/Business manager CPF document |   no         |   -        |
+|   phone               |   string  | Partner/Business manager phone number |   no         |   -        |
+|   birthdate           |   date    |  Partner/Business manager birthdate    |  no |   `Y-m-d` ou `d/m/Y` |
 |   **[bank]**            |   **Object**  |   **Company's Bank or Seller Bank data**   |   -          |   -        |
 |   code                |   string  |   Bank code                                  |   no         |   3        |
 |   agency              |   string  |   Agency number                          |   no        |   4        |
