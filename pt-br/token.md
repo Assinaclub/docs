@@ -29,6 +29,7 @@
 | **[holder]**| **Object** | **Dados do Titular do Cartão de Crédito** | - |
 | name | string | Nome completo do Titular do Cartão | 50 |
 | cpfCnpj | string | CPF ou CNPJ do Titular do Cartão | 14 |
+| foreignerNumber | string | ID Card ou Número do Passaporte | 30 |
 | mobilePhone | string | Número do celular do Titular | 16 |
 | birthdate | string | Data de nascimento do titular do Cartão | AAAA-MM-DD |
 | **[address]** | **Object** | **Dados do Endereço** | - |
@@ -98,6 +99,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 | **holder** | **Object** | **Dados do Titular do cartão** |
 | name | string | Nome completo do Titular do cartão |
 | cpf | string | CPF/CNPJ do Titular do cartão |
+| foreignerNumber | string | ID Card ou Passaporte do Titular do cartão |
 | **contacts** | **Object** | **Dados de contato do Titular** |
 | type | string | Tipo do contato |
 | number | string | Número do contato |
@@ -129,6 +131,7 @@ Confira nos exemplos abaixo o conteúdo de resposta desse serviço.
         "holder": {
             "name": "FULANO",
             "cpf": "27151617003",
+            "foreignerNumber": "",
             "email": "",
             "contacts": [
                 {

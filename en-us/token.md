@@ -29,6 +29,7 @@
 | **[holder]**| **Object** | **Card Holder (Owner) data** | - |
 | name | string | Holder's complete name | 50 |
 | cpfCnpj | string | Holder's CPF or CNPJ | 14 |
+| foreignerNumber | string | ID Card or Passport Number | 30 |
 | mobilePhone | string | Holder's Cell phone | 16 |
 | birthdate | string | Holder's birth date | YYYY-MM-DD |
 | **[address]** | **Object** | **Holder's address data** | - |
@@ -98,6 +99,7 @@ Check in the example below this service's response content structure
 | **holder** | **Object** | **Card Holder's data** |
 | name | string | Holder's complete name |
 | cpf | string | Holder's CPF or CNPJ |
+| foreignerNumber | string | Holder's ID Card or Passport number |
 | **contacts** | **Object** | **Card Holder's contact data ** |
 | type | string | Contact type |
 | number | string | Contact number |
@@ -129,6 +131,7 @@ Check out in the examples below this service's response content
         "holder": {
             "name": "FULANO",
             "cpf": "27151617003",
+            "foreignerNumber": "",
             "email": "",
             "contacts": [
                 {
