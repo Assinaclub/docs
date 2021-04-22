@@ -27,7 +27,7 @@
 |   due_date  |   date  |   Data de Vencimento da Primeira Parcela da Cobrança  |   sim  |   Y-m-d ou d/m/Y  |
 |   frequency  |   integer  |   Frequência da Cobrança (depende do Intervalo)  |   não  |   1 - 12  |
 |   interval  |   string  |   Intervalo da Cobrança (diário, semanal, mensal)  |   não  |   `day`, `week` ou `month`  |
-|   type  |   string  |   Tipo da Cobrança (Normal ou Recorrente). Padrão: Normal  |   não  |   `normal` ou `recurring`  |
+|   type  |   string  |   Tipo da Cobrança (Normal ou Recorrente). Padrão: Normal  |   não  |   `charge` ou `recurring`  |
 |   last_charge_date  |   date  |   Data da Ultima Cobrança  |   não  |   Y-m-d ou d/m/Y  |
 |   callback_url  |   string  |   URL de callback em caso de pagamento  |   não  |   255  |
 |   auto_debit  |   boolean  |   Ativar Débito automatizado no Cartão de Crédito. Válido apenas para pagamentos via Cartão de Crédito.  |   não  |   -  |

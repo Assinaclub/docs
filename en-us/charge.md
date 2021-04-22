@@ -27,7 +27,7 @@
 |   due_date  |   date  |  Charge due date  |  Yes  |  Y-m-d or d/m/Y  |
 |   frequency  |   integer  |  Charge frequency (depends on interval value)  |  No  |   1 - 12  |
 |   interval  |   string  |  Charge Interval (daily, weekly, monthly)  |  no  |  `day`, `week` or `month`  |
-|   type  |   string  |  Charge type (Normal or Recurring). Standard: Normal  |  no  |  `normal` or `recurring`  |
+|   type  |   string  |  Charge type (Normal or Recurring). Standard: Normal  |  no  |  `charge` or `recurring`  |
 |   last_charge_date  |   date  |  Last charge date  |   no  |   Y-m-d ou d/m/Y  |
 |   callback_url  |   string  |  In case of payment callback URL  |   no  |   255  |
 |   auto_debit  |   boolean  |  Active (true) or not (false) automatic debit. Only for Credit Card payments  |   no  |   -  |
