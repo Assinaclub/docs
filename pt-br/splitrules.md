@@ -144,7 +144,8 @@ Confira no exemplo abaixo o conteúdo de resposta desse serviço.
 |   transaction  |   Identificação da Transação       |   string  |   sim          |
 |   id           |   Identificação da Regra de Split  |   string  |   sim          |
 
-### Status de Retorno
+### Código de Retorno
+
 |   Código  |   Descrição                                                                                           |
 |-----------|-------------------------------------------------------------------------------------------------------|
 |   400     |   Recurso previamente removido ou transação já foi capturada                                          |

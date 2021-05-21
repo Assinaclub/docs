@@ -59,7 +59,7 @@
     * <span class="verb httpGET">GET</span> [Query Split Rule](en-us/splitrules?id=split-rule-query)
     * <span class="verb httpGET">GET</span> [List Split Rules](en-us/splitrules?id=list-split-rules)
     * <span class="verb httpDELETE">DELETE</span> [Delete Split Rule](en-us/splitrules?id=delete-split-rule)
-* **Transference**
+* **Transfer**
     * [Overview](en-us/transfers?id=overview)
     * <span class="verb httpGET">GET</span> [List Transfers](en-us/transfers?id=list-transferences)
     * <span class="verb httpGET">GET</span> [Query Transference](en-us/transfers?id=query-transference)
@@ -71,6 +71,12 @@
     * [Overview](en-us/linkdepagamento?id=overview)
     * <span class="verb httpPOST">POST</span> [New Payment Link](en-us/linkdepagamento?id=new-payment-link)
     * <span class="verb httpGET">GET</span> [Query Payment Link](en-us/linkdepagamento?id=query-payment-link)
+* **Webhook**
+    * [Overview](en-us/webhook?id=overview)
+    * <span class="verb httpPOST">POST</span> [New Webhook](en-us/webhook?id=new-webhook)
+    * <span class="verb httpGET">GET</span> [Consult Webhook](en-us/webhook?id=consult-webhook)
+    * <span class="verb httpGET">GET</span> [List Webhooks](en-us/webhook?id=list-webhooks)
+    * <span class="verb httpDELETE">DELETE</span> [Delete Webhook](en-us/webhook?id=delete-webhook)
 * **Checkout**
   * [Overview](en-us/checkout?id=overview)
   * <span class="verb httpPOST">POST</span> [New Checkout](en-us/checkout?id=create-checkout)

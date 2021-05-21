@@ -71,6 +71,12 @@
     * [Overview](pt-br/linkdepagamento?id=overview)
     * <span class="verb httpPOST">POST</span> [Novo Link de Pagamento](pt-br/linkdepagamento?id=novo-link-de-pagamento)
     * <span class="verb httpGET">GET</span> [Consultar Link de Pagamento](pt-br/linkdepagamento?id=consultar-link-de-pagamento)
+* **Webhook**
+    * [Overview](pt-br/webhook?id=overview)
+    * <span class="verb httpPOST">POST</span> [Novo Webhook](pt-br/webhook?id=novo-webhook)
+    * <span class="verb httpGET">GET</span> [Consultar Webhook](pt-br/webhook?id=consultar-webhook)
+    * <span class="verb httpGET">GET</span> [Listar Webhooks](pt-br/webhook?id=listar-webhooks)
+    * <span class="verb httpDELETE">DELETE</span> [Deletar Webhook](pt-br/webhook?id=deletar-webhook)
 * **Checkout**
   * [Overview](pt-br/checkout?id=overview)
   * <span class="verb httpPOST">POST</span> [Novo Checkout](pt-br/checkout?id=criar-checkout)
