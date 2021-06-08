@@ -48,7 +48,7 @@
 | payment.boleto.instructions.*.instruction | string | Instrução do Boleto | não | 70 |
 | **[customer]** | **Object** | Dados   do Cliente (Pagador) | sim | - |
 | customer.name | string | Nome do Cliente | sim | 80 |
-| customer.cpf_cnpj | string | CPF   ou CNPJ do Cliente (CPF se Pessoa Física ou CNPJ se Pessoa Juridica) | sim | `cpf`   ou `cnpj` |
+| customer.cpf_cnpj | string | CPF   ou CNPJ do Cliente (CPF se Pessoa Física ou CNPJ se Pessoa Juridica) | não | `cpf`   ou `cnpj` |
 | customer.email | string | E-mail do Cliente | não | 80 |
 | customer.phone | string | Número   do Telefone ou Celular do Cliente | não | 10   ou 11 |
 | customer.birthdate | string | Data de Aniversário do Cliente | não | `Y-m-d` ou `d/m/Y` |
@@ -162,6 +162,31 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
             "sku": "DARKSIDE"
         }
     ]
+}
+```
+
+> Exemplo de Pagamento via Cartão de Crédito para Clientes Estrangeiros (Simples)
+
+```json
+{
+    "amount": 100.00,
+    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "order_id": "1234567",
+    "payment": {
+        "type": "card",
+        "method": "visa",
+        "installments": 1,
+        "card": {
+            "holder": "JACK JONES",
+            "number": "4111111111111111",
+            "expiry_month": "03",
+            "expiry_year": "2021",
+            "cvv": "123"
+        }
+    },
+    "customer": {
+        "name": "Jack Jones",
+    }
 }
 ```
 

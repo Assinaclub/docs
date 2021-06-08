@@ -48,7 +48,7 @@
 | payment.boleto.instructions.*.instruction | string | Bank slip instruciton | no | 70 |
 | **[customer]** | **Object** | Customer's data (acquirer) | yes | - |
 | customer.name | string | Customer's name | yes | 80 |
-| customer.cpf_cnpj | string | Customer's CPF or CNPJ (CPF if it is personal account, CNPJ if it is business account) | yes | `cpf`   ou `cnpj` |
+| customer.cpf_cnpj | string | Customer's CPF or CNPJ (CPF if it is personal account, CNPJ if it is business account) | no | `cpf`   ou `cnpj` |
 | customer.email | string | Customer's email. | no | 80 |
 | customer.phone | string | Customer's phone | no | 10   ou 11 |
 | customer.birthdate | string | Customer's birth date | no | `Y-m-d` ou `d/m/Y` |
@@ -164,6 +164,30 @@ Check out the Content that you can send on the body of the request below
     ]
 }
 ```
+
+> Example of Credit Card Payment for Customers outside of Brazil (Foreigners) (Simple)
+
+```json
+{
+    "amount": 100.00,
+    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "order_id": "1234567",
+    "payment": {
+        "type": "card",
+        "method": "visa",
+        "installments": 1,
+        "card": {
+            "holder": "JACK JONES",
+            "number": "4111111111111111",
+            "expiry_month": "03",
+            "expiry_year": "2021",
+            "cvv": "123"
+        }
+    },
+    "customer": {
+        "name": "Jack Jones",
+    }
+}
 
 > Example of Bank slip payment (Complete)
 
