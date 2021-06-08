@@ -89,7 +89,7 @@
 ### Exemplo de Conteúdo a ser Enviado
 Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisição.
 
-> Exemplo de Pagamento via Cartão de Crédito (Simples)
+#### Exemplo de Pagamento via Cartão de Crédito (Simples)
 
 ```json
 {
@@ -115,7 +115,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Cartão de Crédito (Completo)
+#### Exemplo de Pagamento via Cartão de Crédito (Completo)
 
 ```json
 {
@@ -165,7 +165,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Cartão de Crédito para Clientes Estrangeiros (Simples)
+#### Exemplo de Pagamento via Cartão de Crédito para Clientes Estrangeiros (Simples)
 
 ```json
 {
@@ -190,7 +190,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Boleto (Completo)
+#### Exemplo de Pagamento via Boleto (Completo)
 
 ```json
 {
@@ -245,7 +245,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento com Tokenização do Cartão de Crédito
+#### Exemplo de Pagamento com Tokenização do Cartão de Crédito
 
 ```json
 {
@@ -271,7 +271,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento utilizando apenas o Token de Cartão
+#### Exemplo de Pagamento utilizando apenas o Token de Cartão
 
 ```json
 {
@@ -291,7 +291,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Cartão de Crédito com Criação de Assinatura|Cobrança Recorrente
+#### Exemplo de Pagamento via Cartão de Crédito com Criação de Assinatura|Cobrança Recorrente
 
 ```json
 {
@@ -335,7 +335,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Cartão de Crédito com Split de Pagamento
+#### Exemplo de Pagamento via Cartão de Crédito com Split de Pagamento
 
 ```json
 {
@@ -384,7 +384,7 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
 }
 ```
 
-> Exemplo de Pagamento via Pix (Completo)
+#### Exemplo de Pagamento via Pix (Completo)
 
 ```json
 {
@@ -433,7 +433,6 @@ Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisiç
     ]
 }
 ```
-
 
 ### Status de Retorno
 | Código | Descrição                                                                                          |

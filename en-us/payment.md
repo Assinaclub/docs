@@ -89,7 +89,7 @@
 ### Example of Sent Content
 Check out the Content that you can send on the body of the request below
 
-> Example of Credit Card Payment (Simple)
+#### Example of Credit Card Payment (Simple)
 
 ```json
 {
@@ -115,7 +115,7 @@ Check out the Content that you can send on the body of the request below
 }
 ```
 
-> Example of Credit Card Payment (Complete)
+#### Example of Credit Card Payment (Complete)
 
 ```json
 {
@@ -165,7 +165,7 @@ Check out the Content that you can send on the body of the request below
 }
 ```
 
-> Example of Credit Card Payment for Customers outside of Brazil (Foreigners) (Simple)
+#### Example of Credit Card Payment for Customers outside of Brazil (Foreigners) (Simple)
 
 ```json
 {
@@ -244,7 +244,7 @@ Check out the Content that you can send on the body of the request below
 }
 ```
 
-> Example of Payment with Credit Card Tokening
+#### Example of Payment with Credit Card Tokening
 
 ```json
 {
@@ -270,7 +270,7 @@ Check out the Content that you can send on the body of the request below
 }
 ```
 
-> Example of Payment using only Card's Token.
+#### Example of Payment using only Card's Token.
 
 ```json
 {
@@ -290,7 +290,7 @@ Check out the Content that you can send on the body of the request below
 }
 ```
 
-> Example of Payment via Credit Card with Creating an Subscription|Charge
+#### Example of Payment via Credit Card with Creating an Subscription|Charge
 
 ```json
 {
@@ -334,7 +334,7 @@ Check out the Content that you can send on the body of the request below
 }
 ```
 
-> Example of Payment via Credit Card with Payment Split
+#### Example of Payment via Credit Card with Payment Split
 
 ```json
 {
@@ -383,7 +383,7 @@ Check out the Content that you can send on the body of the request below
 }
 ```
 
-> Example of Pix Payment (Complete)
+#### Example of Pix Payment (Complete)
 
 ```json
 {
@@ -432,7 +432,6 @@ Check out the Content that you can send on the body of the request below
     ]
 }
 ```
-
 
 ### Return Status
 | Código | Descrição                                                    |
