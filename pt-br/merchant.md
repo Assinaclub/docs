@@ -27,7 +27,8 @@ Este serviço realiza o processo de credenciamento de um Estabelecimento Comerci
 | Atributo      | Tipo       | Descrição                                                     | Obrigatório | Tamanho                  |
 |---------------|------------|---------------------------------------------------------------|-------------|--------------------------|
 | name          | string     | Nome da Empresa ou Pessoa Física                              | sim         | 80                       |
-| email         | string     | Endereço de e-mail. Será utilizado como login da conta        | sim         | 50                       |
+| email         | string     | Endereço de e-mail. Será utilizado como login da conta caso não seja informado o `login`       | sim         | 50                       |
+| login         | string     | Será utilizado como login da conta (Alphanumérico)        | não         | 50                       |
 | password      | string     | Senha de acesso que será utilizada no acesso ao Painel        | sim         | 6-20                     |
 | document      | string     | Número de CPF ou CNPJ                                         | sim         | -                        |
 | phone         | string     | Número de Telefone ou Celular                                 | sim         | -                        |

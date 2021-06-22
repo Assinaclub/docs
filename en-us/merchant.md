@@ -27,7 +27,8 @@ This service performs the accreditation process of a Commercial Establishment.
 | Attribute     | Type       | Description                                                  | Mandatory | Size                     |
 | ------------- | ---------- | ------------------------------------------------------------ | --------- | ------------------------ |
 | name          | string     | Name of the Legal Entity or Individual Person                | yes       | 80                       |
-| email         | string     | Email adress. It will be used as account login               | yes       | 50                       |
+| email         | string     | Email adress. It will be used as account login if no `login` is informed | yes       | 50                       |
+| login         | string     | It will be used as account login (Alphanumeric)               | no       | 50                       |
 | password      | string     | Password that will be used on iPag's Panel access            | yes       | 6-20                     |
 | document      | string     | CPF or CNPJ number                                           | yes       | -                        |
 | phone         | string     | Phone or Cellphone number                                    | yes       | -                        |
