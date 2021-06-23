@@ -13,6 +13,7 @@
     * <span class="verb httpPOST">POST</span> [Cancelar Pagamento](pt-br/payment?id=cancelar-pagamento)
     * [Métodos de Pagamento](pt-br/payment_methods?id=metodos-de-pagamento)
     * [Status de Pagamento](pt-br/payment_status?id=status-de-pagamento)
+    * [Cartões para Simulação](pt-br/payment_test_cards?id=cartoes-para-simulacao)
 * **Cliente**
     * [Overview](pt-br/customer?id=overview)
     * <span class="verb httpPOST">POST</span> [Novo Cliente](pt-br/customer?id=novo-cliente)
