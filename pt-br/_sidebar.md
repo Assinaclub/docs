@@ -24,10 +24,16 @@
 * **Plano de Assinatura**
     * [Overview](pt-br/subscription_plan?id=overview)
     * <span class="verb httpPOST">POST</span> [Novo Plano de Assinatura](pt-br/subscription_plan?id=novo-plano-de-assinatura)
-    * <span class="verb httpPUT">PUT</span> [Alterar Plano de assinatura](pt-br/subscription_plan?id=alterar-plano-de-assinatura)
+    * <span class="verb httpPUT">PUT</span> [Alterar Plano de Assinatura](pt-br/subscription_plan?id=alterar-plano-de-assinatura)
     * <span class="verb httpGET">GET</span> [Consultar Plano de Assinatura](pt-br/subscription_plan?id=consultar-plano-de-assinatura)
     * <span class="verb httpGET">GET</span> [Listar Planos de Assinatura](pt-br/subscription_plan?id=listar-planos-de-assinatura)
     * <span class="verb httpDELETE">DELETE</span> [Deletar Plano de Assinatura](pt-br/subscription_plan?id=deletar-plano-de-assinatura)
+* **Assinatura**
+    * [Overview](pt-br/subscription?id=overview)
+    * <span class="verb httpPOST">POST</span> [Nova Assinatura](pt-br/subscription?id=nova-assinatura)
+    * <span class="verb httpPUT">PUT</span> [Alterar Assinatura](pt-br/subscription?id=alterar-assinatura)
+    * <span class="verb httpGET">GET</span> [Consultar Assinatura](pt-br/subscription?id=consultar-assinatura)
+    * <span class="verb httpGET">GET</span> [Listar Assinaturas](pt-br/subscription?id=listar-assinaturas)
 
 * **Transação**
     * [Overview](pt-br/transaction?id=overview)
