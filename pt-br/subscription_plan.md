@@ -38,7 +38,7 @@ Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 
 ```json
 {
-    "name": "PLANO GOLD",
+  "name": "PLANO GOLD",
   "description": "Plano Gold com até 4 treinos por semana",
   "amount": 99.00,
   "frequency": "monthly",
