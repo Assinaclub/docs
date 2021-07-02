@@ -44,20 +44,20 @@
 Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
 
 ```json
-{
-	"external_code": "127",
-	"amount": 0,
-	"buttons": {
-		"enable": true,
-		"one": 10.00,
-		"two": 25.00,
-		"three": 100.00
-	},
-	"description": "LINK DE PAGAMENTO SUPER BACANA",
-	"header": "DOAÇÃO AVULSA",
-	"subHeader": "Doação destinada a campanha dos meninos desabrigados do Vale do Ribeira",
-	"expireAt": "2020-12-25 23:59:59"
-}
+  {
+  "external_code": "127",
+  "amount": 0,
+  "buttons": {
+    "enable": true,
+    "one": 10.00,
+    "two": 25.00,
+    "three": 100.00
+  },
+  "description": "LINK DE PAGAMENTO SUPER BACANA",
+  "header": "DOAÇÃO AVULSA",
+  "subHeader": "Doação destinada a campanha dos meninos desabrigados do Vale do Ribeira",
+  "expireAt": "2020-12-25 23:59:59"
+  }
 ```
 
 ### Status de Retorno

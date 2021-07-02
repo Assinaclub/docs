@@ -57,17 +57,17 @@ Check out the example below the content that will be sent on request's body.
 
 ```json
 {
-    "name": “Academia Interestelar 47",
+    "name": "Academia Interestelar 47",
     "email": "adm@academia.me",
     "password": "123456",
     "document": "72.032.656/0001-05",
     "phone": "(11) 5555-5555",
     "address": {
-        "street": “Rua Mariano Lunar",
+        "street": "Rua Mariano Lunar",
         "number": "100",
         "district": "Centro",
         "complement": "APTO 412",
-        "city": “São Paulo",
+        "city": "São Paulo",
         "state": "SP",
         "zipcode": "01156000"
     }
@@ -133,19 +133,19 @@ Check out in the examples below the response content in this service.
     "bussiness_name": "Academia Interestelar 47",
     "document": "72.032.656/0001-05",
     "email": "adm@academia.me",
-    "phone": “(11) 5555-5555”,
+    "phone": "(11) 5555-5555",
         "address": {
-        "street": “Rua Mariano Lunar",
+        "street": "Rua Mariano Lunar",
         "number": "100",
         "district": "Centro",
         "complement": "APTO 412",
-        "city": “São Paulo",
+        "city": "São Paulo",
         "state": "SP",
         "zipcode": "01156000"
     },
     "owner": [],
     "created_at": "2020-01-28",
-    "updated_at": “2020-01-28"
+    "updated_at": "2020-01-28"
     }
 }
 ```
