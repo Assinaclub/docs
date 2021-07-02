@@ -68,7 +68,7 @@ Confira no exemplo abaixo o conteúdo que será enviado no `body` da requisiçã
     "phone": "(11) 98712-1234",
     "description": "",
     "address": {
-        "street": "Rua Júlio Gonzalez”,
+        "street": "Rua Júlio Gonzalez",
         "number": "1000",
         "district": "Barra Funda",
         "complement": "10 Andar Sala 3",
@@ -193,7 +193,7 @@ Confira no exemplo abaixo o conteúdo de resposta desse serviço.
       "Document is not a valid CPF\/CNPJ."
     ]
   },
-  "resource": “resource.sellers.store"
+  "resource": "resource.sellers.store"
 }
 ```
 

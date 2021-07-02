@@ -56,12 +56,12 @@ In case of success:
             "resource": "transfers",
             "attributes": {
                 "transfer_number": "5ab6987a6ee1970dacadc7fc1909dd8c",
-                "transfer_source": “bank account”,
-		    "receiver_id": “308a4f1079d3c50653dfeca80d85ea6a",
+                "transfer_source": "bank account",
+		    "receiver_id": "308a4f1079d3c50653dfeca80d85ea6a",
                 "status": "failed",
                 "amount": 25.48,
                 "original_amount": 25.48,
-                "currency": “BRL",
+                "currency": "BRL",
                 "description": "",
                 "created_at": "2018-12-20 16:54:44",
                 "updated_at": "2018-12-20 16:54:44"
@@ -69,8 +69,8 @@ In case of success:
         }
     ],
     "links": {
-        "first": “https://api.ipag.com.br/service/resources/transfers?page=1”,
-        "last": “https://api.ipag.com.brservice/resources/transfers?page=1",
+        "first": "https://api.ipag.com.br/service/resources/transfers?page=1",
+        "last": "https://api.ipag.com.brservice/resources/transfers?page=1",
         "prev": null,
         "next": null
     },
@@ -135,15 +135,15 @@ In case of success:
     "resource": "transfers",
     "attributes": {
         "transfer_number": "5ab6987a6ee1970dacadc7fc1909dd8c",
-        "transfer_source": “bank account",
+        "transfer_source": "bank account",
         "receiver_id": "308a4f1079d3c50653dfeca80d85ea6a",
         "status": "failed",
         "amount": 25.48,
         "original_amount": 25.48,
-        "currency": “BRL",
+        "currency": "BRL",
         "description": "",
         "created_at": "2018-12-20 16:54:44",
-        "updated_at": "2018-12-20 16:54:44”,
+        "updated_at": "2018-12-20 16:54:44",
         "receivables": {
             "data": [
                 {

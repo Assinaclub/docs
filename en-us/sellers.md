@@ -68,7 +68,7 @@ Check out the example below the content that will be sent on request's body.
     "phone": "(11) 98712-1234",
     "description": "",
     "address": {
-        "street": "Rua Júlio Gonzalez”,
+        "street": "Rua Júlio Gonzalez",
         "number": "1000",
         "district": "Barra Funda",
         "complement": "10 Andar Sala 3",
@@ -193,7 +193,7 @@ Check out in the example below this service's response content.
       "Document is not a valid CPF\/CNPJ."
     ]
   },
-  "resource": “resource.sellers.store"
+  "resource": "resource.sellers.store"
 }
 ```
 

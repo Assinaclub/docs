@@ -185,7 +185,7 @@ Check out the Content that you can send on the body of the request below
         }
     },
     "customer": {
-        "name": "Jack Jones",
+        "name": "Jack Jones"
     }
 }
 
@@ -248,25 +248,25 @@ Check out the Content that you can send on the body of the request below
 
 ```json
 {
-	"amount": 97.65,
-	"callback_url": "https://9a32ecb90e4cb7ef0f44d6262ec7b5d9.m.pipedream.net",
-	"payment": {
-		"type": "card",
-		"method": "visa",
-		"installments": 1,
-		"card": {
-			"tokenize": true,
-			"holder": "FULANO DA SILVA",
-			"number": "4532 2876 7749 2847",
-			"expiry_month": "03",
-			"expiry_year": "2021",
-			"cvv": "123"
-		}
-	},
-	"customer": {
-		"name": "Jack Jins",
-		"cpf_cnpj": "799.993.388-01"
-	}
+  "amount": 97.65,
+  "callback_url": "https://9a32ecb90e4cb7ef0f44d6262ec7b5d9.m.pipedream.net",
+  "payment": {
+    "type": "card",
+    "method": "visa",
+    "installments": 1,
+    "card": {
+      "tokenize": true,
+      "holder": "FULANO DA SILVA",
+      "number": "4532 2876 7749 2847",
+      "expiry_month": "03",
+      "expiry_year": "2021",
+      "cvv": "123"
+    }
+  },
+  "customer": {
+    "name": "Jack Jins",
+    "cpf_cnpj": "799.993.388-01"
+  }
 }
 ```
 
@@ -274,19 +274,19 @@ Check out the Content that you can send on the body of the request below
 
 ```json
 {
-	"amount": 97.65,
-	"callback_url": "https://9a32ecb90e4cb7ef0f44d6262ec7b5d9.m.pipedream.net",
-	"payment": {
-		"type": "card",
-		"installments": 1,
-		"card": {
-			"token": "d2ce5a32-c67e-4c50-8726-f6fc43c477fb"
-		}
-	},
-	"customer": {
-		"name": "Jack Jins",
-		"cpf_cnpj": "799.993.388-01"
-	}
+  "amount": 97.65,
+  "callback_url": "https://9a32ecb90e4cb7ef0f44d6262ec7b5d9.m.pipedream.net",
+  "payment": {
+    "type": "card",
+    "installments": 1,
+    "card": {
+      "token": "d2ce5a32-c67e-4c50-8726-f6fc43c477fb"
+    }
+  },
+  "customer": {
+    "name": "Jack Jins",
+    "cpf_cnpj": "799.993.388-01"
+  }
 }
 ```
 
@@ -393,7 +393,7 @@ Check out the Content that you can send on the body of the request below
     "payment": {
         "type": "pix",
         "method": "pix",
-        "pix_expires_in": 60,
+        "pix_expires_in": 60
     },
     "customer": {
         "name": "Fulano da Silva",
