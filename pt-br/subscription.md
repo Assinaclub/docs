@@ -253,3 +253,103 @@ Confira no exemplo abaixo o conteúdo que poderá ser enviado no body da requisi
 | page | integer | Número da Página |
 
 !> Para utilizar o filtro de Período `from_date` e `to_date` devem ser informados.
+
+-
+
+## Quitar Parcela da Assinatura
+
+---
+<span class="verb httpPOST">POST</span> ***/service/resources/invoice_installments?subscription_id={`subscription_id`}&invoice_number={`invoice_number`}&action=`pay`***
+
+---
+
+### Query Params 
+
+|   Atributo  |   Tipo   |   Descrição                |
+|-------------|----------|----------------------------|
+|   subscription_id       |   integer |   ID Único da Assinatura |
+|   invoice_number       |   integer |   Número da Parcela (Fatura) |
+|   action       |   string |   Ação ser realizada, utilizar `pay` |
+
+
+### Exemplo de Envio
+
+`POST` https://api.ipag.com.br/service/resources/invoice_installments?subscription_id=1725&invoice_number=3&action=pay
+
+### Em caso de sucesso
+
+```json
+{
+  "subscription_id": 1725,
+  "number": 3,
+  "due_date": "2021-01-20",
+  "amount": 15,
+  "paid_amount": 15,
+  "discount": 0,
+  "payment_date": "2021-07-08",
+  "description": "Assinatura",
+  "payment": null
+}
+```
+
+### Em caso de falha
+
+```json
+{
+  "code": "400",
+  "message": "Invoice Installment #  has been paid already",
+  "resource": "resource.subscription_invoice"
+}
+```
+
+## Agendar Pagamento de Parcela da Assinatura
+
+!> Somente é possível agendar pagamentos de parcelas com vencimento para hoje ou data inferior (vencida).
+
+!> Somente é possível agendar pagamentos que ainda não foram quitados, ou seja, que possuem valor de pagamento zerado.
+
+---
+<span class="verb httpPOST">POST</span> ***/service/resources/invoice_installments?subscription_id={`subscription_id`}&invoice_number={`invoice_number`}&action=`schedule`***
+
+---
+
+### Query Params 
+
+|   Atributo  |   Tipo   |   Descrição                |
+|-------------|----------|----------------------------|
+|   subscription_id       |   integer |   ID Único da Assinatura |
+|   invoice_number       |   integer |   Número da Parcela (Fatura) |
+|   action       |   string |   Ação ser realizada, utilizar `schedule` |
+
+
+### Exemplo de Envio
+
+`POST` https://api.ipag.com.br/service/resources/invoice_installments?subscription_id=1725&invoice_number=3&action=schedule
+
+### Em caso de sucesso
+
+HTTP `201 Created`
+
+```json
+'ok'
+```
+
+### Em caso de falha
+
+```json
+{
+  "code": "400",
+  "message": "Installment #3 of Invoice #1725 has been queued already",
+  "resource": "resource.subscription_invoice"
+}
+```
+
+ou 
+
+```json
+{
+  "code": "400",
+  "message": "Invoice Installment #2 has been paid already, it can't be scheduled.",
+  "resource": "resource.subscription_invoice"
+}
+```

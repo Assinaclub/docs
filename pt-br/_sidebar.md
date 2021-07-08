@@ -34,6 +34,8 @@
     * <span class="verb httpPUT">PUT</span> [Alterar Assinatura](pt-br/subscription?id=alterar-assinatura)
     * <span class="verb httpGET">GET</span> [Consultar Assinatura](pt-br/subscription?id=consultar-assinatura)
     * <span class="verb httpGET">GET</span> [Listar Assinaturas](pt-br/subscription?id=listar-assinaturas)
+    * <span class="verb httpPOST">POST</span> [Quitar Parcela da Assinatura](pt-br/subscription?id=quitar-parcela-da-assinatura)
+    * <span class="verb httpPOST">POST</span> [Agendar Pagamento](pt-br/subscription?id=agendar-pagamento-de-parcela-da-assinatura)
 
 * **Transação**
     * [Overview](pt-br/transaction?id=overview)
