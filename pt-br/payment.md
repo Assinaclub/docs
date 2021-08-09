@@ -85,6 +85,7 @@
 | split_rules.amount | numeric | Valor   Fixo Definido que será descontado do Valor da Transação | não | - |
 | split_rules.liable | boolean | Define se valor deverá ser descontado   em caso de Chargeback | não | - |
 | split_rules.charge_processing_fee | boolean | Define   se deverá ser calculado a taxa da transação referente ao valor do split | não | - |
+| split_rules.hold_receivables | boolean | Define se o Recebível ficará em Espera até a solicitação de liberação (ReceivableReleaseRequest) | não | Padrão: `false` |
 
 ### Exemplo de Conteúdo a ser Enviado
 Confira nos exemplos abaixo o conteúdo que poderá enviado no body da requisição.

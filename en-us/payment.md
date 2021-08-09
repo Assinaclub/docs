@@ -85,6 +85,7 @@
 | split_rules.amount | numeric | Fixed value defined that will be discounted from the Transaction Value | no | - |
 | split_rules.liable | boolean | Defines if the value will need to be discounted in case of Chargeback | no | - |
 | split_rules.charge_processing_fee | boolean | Defines if it will be needed to calculate the transaction fee that refers to the split value | no | - |
+| split_rules.hold_receivables | boolean | Defines if the Receivable will be holded until Release request (ReceivableReleaseRequest)  | no | Default: `false` |
 
 ### Example of Sent Content
 Check out the Content that you can send on the body of the request below

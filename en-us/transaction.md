@@ -389,3 +389,27 @@ In case of Transaction not found:
     "resource": "resource.transaction.view"
 }
 ```
+
+## Release Transaction Receivables
+---
+<span class="verb httpPOST">POST</span> ***/service/transaction/release_receivables***
+
+---
+
+### Example of Content to be sent
+Check out the example below the content that will be sent on request's body.
+
+```json
+{
+	"seller_id": 123456,
+	"transaction_id": 1011000
+}
+```
+
+### Return Status
+| Code | Descrição                                                    |
+| ------ | ------------------------------------------------------------ |
+| 401    | Not authenticated. Check if Basic Authentication keys had been correctly informed. |
+| 403    | Not authorized. Your account has no permission to complete this action. |
+| 404    | Resource Not Found.
+| 200    | Receivables Released.

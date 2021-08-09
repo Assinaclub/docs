@@ -389,3 +389,27 @@ Em caso de transação não encontrada:
     "resource": "resource.transaction.view"
 }
 ```
+
+## Liberar Recebíveis da Transação
+---
+<span class="verb httpPOST">POST</span> ***/service/transaction/release_receivables***
+
+---
+
+### Exemplo de Conteúdo a ser Enviado
+Confira no exemplo abaixo o conteúdo que será enviado no body da requisição.
+
+```json
+{
+	"seller_id": 123456,
+	"transaction_id": 1011000
+}
+```
+
+### Status de Retorno
+|   Código  |   Descrição                                                                                           |
+|-----------|-------------------------------------------------------------------------------------------------------|
+|   401     |   Não autenticado. Verifique se foi informado corretamente as chaves de API no Basic Authentication.  |
+|   403     |   Não Autorizado. Sua conta não tem permissão para realizar essa ação.                                |
+|   404     |   Recursos não encontrados.                                                                           |
+|   200     |   Recebíveis Liberados para Pagamento.                                                                |
