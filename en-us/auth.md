@@ -1,6 +1,6 @@
 # Authentication
 
-> What API KEY is used for? API KEY it is used to authenticate the iPag's API operations.
+> What API KEY is used for? API KEY it is used to authenticate the Plus Commerce API operations.
 
 ## How it works
 
@@ -14,12 +14,12 @@ All the API calls must be done in HTTPS to ensure the security.
 
 Basic Auth it is essential to use HTTP client library. Some tools like cURL provides corresponding command line as an option.
 
-!> You must keep your API key safe, under any circumstances. DO NOT SHARE your API key with anybody, not even in iPag's support channel. Nobody legitimately from iPag will request your API key!
+!> You must keep your API key safe, under any circumstances. DO NOT SHARE your API key with anybody, not even in Plus Commerce support channel. Nobody legitimately from Plus Commerce will request your API key!
 
 ## How to get your API Key
 
-Access the iPag's Painel or the Sandbox painel, click on yout name, at the right top corner. Then, click on My Account (Minha Conta).
+Access the Plus Commerce Painel or the Sandbox painel, click on yout name, at the right top corner. Then, click on My Account (Minha Conta).
 
 See your API_ID and API_KEY right on the beginning of the page.
 
-!> In case you do not have an API KEY in your account, do your request at suporte@ipag.com.br.
+!> In case you do not have an API KEY in your account, do your request at sac@pluscommerce.com.br.
