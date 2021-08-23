@@ -1,10 +1,10 @@
 # Cartões para Simulação <!-- {docsify-ignore-all} -->
 
-!> Os cartões informados aqui são válidos porém não verdadeiros, e tem o objetivo apenas para testes. Para que esses cartões funcionem da forma esperada é preciso ter um método SIMULADO configurado em sua conta iPag!
+!> Os cartões informados aqui são válidos porém não verdadeiros, e tem o objetivo apenas para testes. Para que esses cartões funcionem da forma esperada é preciso ter um método SIMULADO configurado em sua conta Plus Commerce!
 
 !> Métodos de Pagamento devem ser utilizados SOMENTE em ambiente **Sandbox**. Isso pode evitar que você lance sua aplicação com um Método de Pagamento não válido.
 
-> Caso ainda não possua Método de Pagamento Simulado configurado em sua Conta iPag, <a href="#">Clique aqui</a>.
+> Caso ainda não possua Método de Pagamento Simulado configurado em sua Conta Plus Commerce, entre em contato com nosso suporte.
 
 ## Cartões de Teste
 
