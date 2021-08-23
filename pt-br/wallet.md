@@ -4,7 +4,7 @@
 
 > Serviço responsável por visualizar dados da Carteira Digital
 
-!> Este recurso está disponível somente para Estabelecimento que possuem Subadquirência do iPag.
+!> Este recurso está disponível somente para Estabelecimento que possuem Subadquirência nativa.
 
 ### Headers
 
