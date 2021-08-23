@@ -3,9 +3,9 @@
 > Toda transação é representada por um código de retorno das APIs, este código representa o ponto que a transação se encontra em seu fluxo de vida, veja abaixo a lista completa de código e ocorrência para cada opção de pagamento de uma transação:
 
 Código	Nome	Descrição	Ocorrência
-1	Pendente	Iniciado uma transação pelo comprador, porém até o momento o iPag não recebeu nenhuma informação sobre o pagamento.	Boleto e Bitcoin
+1	Pendente	Iniciado uma transação pelo comprador, porém até o momento a Plus Commerce não recebeu nenhuma informação sobre o pagamento.	Boleto e Bitcoin
 2	Processamento	Esta transação está em processamento e em breve deve retornar o status final da situação do pagamento.	Todos
-3	Autorizado	A transação foi paga pelo comprador e o iPag já recebeu uma confirmação da instituição financeira responsável pelo processamento.	Todos
+3	Autorizado	A transação foi paga pelo comprador e a Plus Commerce já recebeu uma confirmação da instituição financeira responsável pelo processamento.	Todos
 5	Em disputa	Dentro do prazo de liberação da transação o comprador abriu uma disputa para fins de contestação da transação.	Cartão de Crédito
 6	Devolvido	A transação foi devolvida, assim o valor desta retornou para o comprador.	Cartão de Crédito
 7	Baixado	O boleto bancário foi baixado automáticamente pela instituição financeira após 29 dias de seu vencimento.	Boleto
