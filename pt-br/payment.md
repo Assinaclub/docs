@@ -528,7 +528,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
 | split_rules.[].attributes.charge_processing_fee | boolean | Considera a Taxa da Adquirente   na Divisão |
 | split_rules.[].attributes.created_at | datetime | Data   de criação da Regra de Split |
 | split_rules.[].attributes.updated_at | datetime | Data de alteração da Regra de   Split |
-| [**receivables**]&#9660; | **Object** | Dados   dos Recebíveis da Transação (Somente para Sub-adquirência iPag) |
+| [**receivables**]&#9660; | **Object** | Dados   dos Recebíveis da Transação (Somente para Sub-adquirência nativa) |
 | receivables.[].id | numeric | Identificação   Única do Recebível |
 | receivables.[].resource | string | Nome   do Recurso |
 | receivables.[].attributes | **Object** | Dados do Recebível |
