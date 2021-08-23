@@ -527,7 +527,7 @@ Check it out on the example below the response content from this service.
 | split_rules.[].attributes.charge_processing_fee | boolean | Considers (true) or not (false) the acquirer's charge processing fee |
 | split_rules.[].attributes.created_at | datetime | Split rule creation date |
 | split_rules.[].attributes.updated_at | datetime | Split rule update date |
-| [**receivables**]&#9660; | **Object** | Transaction's receivables data (only for iPag sub-acquiring) |
+| [**receivables**]&#9660; | **Object** | Transaction's receivables data (only for Plus Commerce native payments) |
 | receivables.[].id | numeric | Receivable unique ID |
 | receivables.[].resource | string | Resource name |
 | receivables.[].attributes | **Object** | Receivable data |
