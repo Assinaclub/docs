@@ -28,8 +28,8 @@ This service performs the accreditation process of a Commercial Establishment.
 | ------------- | ---------- | ------------------------------------------------------------ | --------- | ------------------------ |
 | name          | string     | Name of the Legal Entity or Individual Person                | yes       | 80                       |
 | email         | string     | Email adress. It will be used as account login if no `login` is informed | yes       | 50                       |
-| login         | string     | It will be used as account login (Alphanumeric)               | no       | 50                       |
-| password      | string     | Password that will be used on iPag's Panel access            | yes       | 6-20                     |
+| login         | string     | It will be used as account login (Alphanumeric)              | no        | 50                       |
+| password      | string     | Password that will be used on Plus Commerce Panel access     | yes       | 6-20                     |
 | document      | string     | CPF or CNPJ number                                           | yes       | -                        |
 | phone         | string     | Phone or Cellphone number                                    | yes       | -                        |
 | **[address]** | **Object** | Address data                                                 | yes       | -                        |
