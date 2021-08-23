@@ -1,10 +1,10 @@
 # Simulation Cards <!-- {docsify-ignore-all} -->
 
-!> The cards entered here are valid but not genuine, and are intended for testing purposes only. For these cards to work as expected you need to have a SIMULATED method configured in your iPag account!
+!> The cards entered here are valid but not genuine, and are intended for testing purposes only. For these cards to work as expected you need to have a SIMULATED method configured in your Plus Commerce account!
 
 !> Payment Methods must be used ONLY in **Sandbox** environment. This may prevent you from launching your application with an invalid Payment Method.
 
-> If you don't have a Simulated Payment Method configured in your iPag Account yet, <a href="#">Click Here</a>.
+> If you don't have a Simulated Payment Method configured in your Plus Commerce Account yet, send an email to: sac@pluscommerce.com.br
 
 ## Test Cards
 
