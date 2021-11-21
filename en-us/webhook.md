@@ -193,10 +193,10 @@ Check out the example below the content that will be sent on request's body.
     }
   ],
   "links": {
-    "first": "https://api.ipag.com.br/service/resources/webhooks?page=1",
-    "last": "https://api.ipag.com.br/service/resources/webhooks?page=2",
+    "first": "https://api.pluscommercebr.com.br/service/resources/webhooks?page=1",
+    "last": "https://api.pluscommercebr.com.br/service/resources/webhooks?page=2",
     "prev": null,
-    "next": "https://api.ipag.com.br/service/resources/webhooks?page=2"
+    "next": "https://api.pluscommercebr.com.br/service/resources/webhooks?page=2"
   },
   "meta": {
     "current_page": 1,

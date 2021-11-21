@@ -69,8 +69,8 @@ In case of success:
         }
     ],
     "links": {
-        "first": "https://api.ipag.com.br/service/resources/transfers?page=1",
-        "last": "https://api.ipag.com.brservice/resources/transfers?page=1",
+        "first": "https://api.pluscommercebr.com.br/service/resources/transfers?page=1",
+        "last": "https://api.pluscommercebr.com.brservice/resources/transfers?page=1",
         "prev": null,
         "next": null
     },

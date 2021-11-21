@@ -121,7 +121,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
           "cycles": 0
         },
         "links": {
-          "payment": "https://api.ipag.com.br/subscriptions?id=49no49a23f67c759bf4fc791ba842aa2d836cfa71fa88dffa23d2299247d651f68b6d410"
+          "payment": "https://api.pluscommercebr.com.br/subscriptions?id=49no49a23f67c759bf4fc791ba842aa2d836cfa71fa88dffa23d2299247d651f68b6d410"
         },
         "created_at": "2018-03-15 10:02:54",
         "updated_at": "2018-03-15 10:02:54"
@@ -165,7 +165,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
       }
     ],
     "links": {
-      "payment": "https://api.ipag.com.br/vpos?billing=1833a888904bd4867929dffd884d60b8"
+      "payment": "https://api.pluscommercebr.com.br/vpos?billing=1833a888904bd4867929dffd884d60b8"
     }
   }
 }
@@ -274,7 +274,7 @@ Confira no exemplo abaixo o conteúdo que poderá ser enviado no body da requisi
 
 ### Exemplo de Envio
 
-`POST` https://api.ipag.com.br/service/resources/invoice_installments?subscription_id=1725&invoice_number=3&action=pay
+`POST` https://api.pluscommercebr.com.br/service/resources/invoice_installments?subscription_id=1725&invoice_number=3&action=pay
 
 ### Em caso de sucesso
 
@@ -324,7 +324,7 @@ Confira no exemplo abaixo o conteúdo que poderá ser enviado no body da requisi
 
 ### Exemplo de Envio
 
-`POST` https://api.ipag.com.br/service/resources/invoice_installments?subscription_id=1725&invoice_number=3&action=schedule
+`POST` https://api.pluscommercebr.com.br/service/resources/invoice_installments?subscription_id=1725&invoice_number=3&action=schedule
 
 ### Em caso de sucesso
 

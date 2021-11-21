@@ -222,10 +222,10 @@ In case of success:
         }
     ],
     "links": {
-        "first": "https://api.ipag.com.br/service/resources/transactions?page=1",
-        "last": "https://api.ipag.com.br/service/resources/transactions?page=30",
+        "first": "https://api.pluscommercebr.com.br/service/resources/transactions?page=1",
+        "last": "https://api.pluscommercebr.com.br/service/resources/transactions?page=30",
         "prev": null,
-        "next": "https://api.ipag.com.br/service/resources/transactions?page=2"
+        "next": "https://api.pluscommercebr.com.br/service/resources/transactions?page=2"
     },
     "meta": {
         "current_page": 1,

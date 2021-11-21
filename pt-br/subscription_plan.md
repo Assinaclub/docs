@@ -105,7 +105,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
       "cycles": 0
     },
     "links": {
-      "payment": "https://api.ipag.com.br/subscriptions?id=7380ad8a673226ae47fce7bff88e9c33c69b66b3f569c61c97d58aa9b31f473bf6799881"
+      "payment": "https://api.pluscommercebr.com.br/subscriptions?id=7380ad8a673226ae47fce7bff88e9c33c69b66b3f569c61c97d58aa9b31f473bf6799881"
     },
     "created_at": "2020-10-09 16:24:08",
     "updated_at": "2020-10-09 16:24:08"

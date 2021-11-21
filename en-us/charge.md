@@ -59,7 +59,7 @@ Check out the example below the content that will be sent on request's body.
         "email": "maria@mail.me",
         "phone": "11 99999-9999"
     },
-    "callback_url": "https://api.ipag.test/retorno_charge"
+    "callback_url": "https://api.pluscommercebr.test/retorno_charge"
 }
 ```
 
@@ -88,7 +88,7 @@ Check out the example below the content that will be sent on request's body.
     "starting_date": "2020-10-30",
     "closing_date": "",
     "auto_debit": false,
-    "callback_url": "https://api.ipag.test/retorno_charge",
+    "callback_url": "https://api.pluscommercebr.test/retorno_charge",
     "created_at": "2020-09-08 14:09:14",
     "updated_at": "2020-09-08 14:09:14",
     "customer": {
@@ -126,7 +126,7 @@ Check out the example below the content that will be sent on request's body.
       "payment_method": "all"
     },
     "links": {
-      "payment": "https://api.ipag.com.br/vpos?billing=0771fc6f0f4b1d7d1bb73bbbe14e0e31"
+      "payment": "https://api.pluscommercebr.com.br/vpos?billing=0771fc6f0f4b1d7d1bb73bbbe14e0e31"
     }
   }
 }

@@ -95,7 +95,7 @@ Check out the Content that you can send on the body of the request below
 ```json
 {
     "amount": 97.86,
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "order_id": "1234567",
     "payment": {
         "type": "card",
@@ -121,7 +121,7 @@ Check out the Content that you can send on the body of the request below
 ```json
 {
     "amount": 100.00,
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "payment": {
         "type": "card",
         "method": "visa",
@@ -171,7 +171,7 @@ Check out the Content that you can send on the body of the request below
 ```json
 {
     "amount": 100.00,
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "order_id": "1234567",
     "payment": {
         "type": "card",
@@ -195,7 +195,7 @@ Check out the Content that you can send on the body of the request below
 ```json
 {
     "amount": 100.00,
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "payment": {
         "type": "boleto",
         "method": "boletopagseguro",
@@ -296,7 +296,7 @@ Check out the Content that you can send on the body of the request below
 ```json
 {
     "amount": 99.00,
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "payment": {
         "type": "card",
         "method": "visa",
@@ -340,7 +340,7 @@ Check out the Content that you can send on the body of the request below
 ```json
 {
     "amount": 99.00,
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "payment": {
         "type": "card",
         "method": "visa",
@@ -389,7 +389,7 @@ Check out the Content that you can send on the body of the request below
 ```json
 {
     "amount": 97.86,
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "order_id": "1234567",
     "payment": {
         "type": "pix",
@@ -582,7 +582,7 @@ Check it out on the example below the response content from this service.
       "code": ""
     },
     "url_authentication": "",
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "card": {
       "holder": "FULANO DA SILVA",
       "number": "411111******1111",
@@ -699,11 +699,11 @@ Check it out on the example below the response content from this service.
     },
     "boleto": null,
     "pix": {
-      "link": "https://api.ipag.com.br/pix?t=71d08e50ed9a7d0f20f0db8cacb20d03",
+      "link": "https://api.pluscommercebr.com.br/pix?t=71d08e50ed9a7d0f20f0db8cacb20d03",
       "qrcode": "00020101021226780014br.gov.bcb.pix2556api.test.com/pix/v2/12345678-4321-1234-5678-12345678901252040000530398654045.005802BR5913EMPRESA TESTE6012Porto Alegre62070503***630492CA"
     },
-    "url_authentication": "https://api.ipag.com.br/pix?t=49e04b8dcd7fc9cb8a5fbd656404c8c0",
-    "callback_url": "https://99mystore.com.br/ipag/callback",
+    "url_authentication": "https://api.pluscommercebr.com.br/pix?t=49e04b8dcd7fc9cb8a5fbd656404c8c0",
+    "callback_url": "https://99mystore.com.br/pluscommercebr/callback",
     "card": null,
     "customer": {
       "name": "Fulano da Silva",

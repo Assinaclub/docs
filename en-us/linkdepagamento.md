@@ -99,7 +99,7 @@ Check out in the example below the content that you can send on request body.
     "payment_method": "all"
   },
   "links": {
-    "payment": "http://api.ipag.com.br/link?t=15e6d09b-704e-4a41-b1b5-ee8620686f5c"
+    "payment": "http://api.pluscommercebr.com.br/link?t=15e6d09b-704e-4a41-b1b5-ee8620686f5c"
   }
 }
 ```
@@ -160,7 +160,7 @@ Check out in the example below the content that you can send on request body.
     "updated_at": "2020-09-03 15:52:24"
   },
   "links": {
-    "payment": "http://api.ipag.com.br/link?t=15e6d09b-704e-4a41-b1b5-ee8620686f5c"
+    "payment": "http://api.pluscommercebr.com.br/link?t=15e6d09b-704e-4a41-b1b5-ee8620686f5c"
   },
   "transactions": [
     {

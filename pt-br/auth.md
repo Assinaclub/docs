@@ -23,3 +23,5 @@ Acesse o Painel da Plus Commerce ou o painel da Sandbox, clique no seu nome, loc
 Veja o seu API_ID e API_KEY logo no início da página.
 
 !> Caso não possua uma API KEY em sua conta, faça a requisição para sac@pluscommerce.com.br.
+
+!> Atenção! O ambiente **sandbox** está em construção

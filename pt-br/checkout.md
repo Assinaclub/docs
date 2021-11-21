@@ -144,7 +144,7 @@ Confira no exemplo abaixo a estrutura do conteúdo de resposta desse serviço.
   "resource": "checkout",
   "attributes": {
     "token": "v4b7043bv01938n1498n0809bh0a9834",
-    "link": "https://api.ipag.com.br/vpos?checkout=v4b7043bv01938n1498n0809bh0a9834",
+    "link": "https://api.pluscommercebr.com.br/vpos?checkout=v4b7043bv01938n1498n0809bh0a9834",
     "created_at": "2020-11-05 15:59:13",
     "created_at": "2020-11-05 14:59:13",
     "updated_at": "2020-11-05 14:59:13"
